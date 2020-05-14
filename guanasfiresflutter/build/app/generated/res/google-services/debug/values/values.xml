@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">669231475865-vmtm0a4sq7nvhbrjiq46grnjmt0irim7.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://guanasfires-1f76f.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">669231475865</string>
+    <string name="google_api_key" translatable="false">AIzaSyBvOxkVQ_6nErTspkBVXlD8uGCkhx7m8K0</string>
+    <string name="google_app_id" translatable="false">1:669231475865:android:739593367824853f2f1c08</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBvOxkVQ_6nErTspkBVXlD8uGCkhx7m8K0</string>
+    <string name="google_storage_bucket" translatable="false">guanasfires-1f76f.appspot.com</string>
+    <string name="project_id" translatable="false">guanasfires-1f76f</string>
+</resources>
