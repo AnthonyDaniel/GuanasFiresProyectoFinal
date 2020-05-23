@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:guanasfires/pages/addFire.dart';
-import 'package:guanasfires/pages/help.dart';
-import 'package:guanasfires/pages/home.dart';
-import 'package:guanasfires/pages/pending.dart';
-import 'package:guanasfires/pages/profile.dart';
+import 'package:guanasfires/pages/model/incendio.dart';
+import 'package:guanasfires/pages/ui/help.dart';
+import 'package:guanasfires/pages/ui/home.dart';
+import 'package:guanasfires/pages/ui/listFire.dart';
+import 'package:guanasfires/pages/ui/login_page.dart';
+import 'package:guanasfires/pages/ui/pending.dart';
+import 'package:guanasfires/pages/ui/profile.dart';
+
 import 'package:guanasfires/pages/widget/top_container.dart';
 import 'package:guanasfires/theme/colors/light_colors.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:flutter/cupertino.dart';
-import '../login_page.dart';
 import '../../services/auth_services/sign_in.dart';
 
 class HomePage extends StatefulWidget {
@@ -21,7 +23,7 @@ class HomePage extends StatefulWidget {
 class _Navbar extends State<HomePage> with TickerProviderStateMixin {
   int _currentIndex = 0;
   final List<Widget> index = [
-    Home(),AddFire(),Pending(),Profile(),Help()
+    Home(),ListFire(),Pending(),Profile(),Help()
   ];
   List<_NavigationIconView> _navigationViews;
 

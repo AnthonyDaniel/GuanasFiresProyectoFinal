@@ -1,4 +1,4 @@
-#Wed May 13 21:21:12 CST 2020
+#Tue May 19 18:03:32 CST 2020
 base.0=C\:\\Users\\Kelin Silva\\OneDrive\\GuanasFires\\GuanasFiresProyectoFinal\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex
