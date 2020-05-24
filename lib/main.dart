@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:guanasfires/pages/ui/login_page.dart';
-
-
+import 'pages/login_page.dart';
 
 void main() => runApp(MyApp());
 
