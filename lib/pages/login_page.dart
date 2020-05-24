@@ -1,6 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:guanasfires/pages/app_navbar/home_page.dart';
+import 'package:guanasfires/pages/testCrud.dart';
 import '../services/auth_services/sign_in.dart';
 
 class LoginPage extends StatefulWidget {
@@ -44,7 +45,7 @@ class _LoginPageState extends State<LoginPage> {
           Navigator.of(context).push(
             MaterialPageRoute(
               builder: (context) {
-                return HomePage();
+                return TestHome();
               },
             ),
           );

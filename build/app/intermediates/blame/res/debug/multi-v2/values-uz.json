@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/decimo/Desktop/PROYECTO_ANDROID/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-uz/values-uz.xml",
+            "outputFile": "/Users/decimo/Desktop/GuanasFiresProyectoFinal/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-uz/values-uz.xml",
             "map": [
                 {
                     "source": "/Users/decimo/.gradle/caches/transforms-2/files-2.1/b9d3e4dcb8d8bce7de7975c41e7065aa/jetified-play-services-basement-17.0.0/res/values-uz/values.xml",

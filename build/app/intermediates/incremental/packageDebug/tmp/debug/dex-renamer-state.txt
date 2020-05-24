@@ -1,4 +1,4 @@
-#Wed May 13 19:22:14 CST 2020
-base.0=/Users/decimo/Desktop/PROYECTO_ANDROID/build/app/intermediates/dex/debug/mergeDexDebug/out/classes.dex
+#Sun May 24 14:52:35 CST 2020
+base.0=/Users/decimo/Desktop/GuanasFiresProyectoFinal/build/app/intermediates/dex/debug/mergeDexDebug/out/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/decimo/Desktop/PROYECTO_ANDROID/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
+            "outputFile": "/Users/decimo/Desktop/GuanasFiresProyectoFinal/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
             "map": [
                 {
-                    "source": "/Users/decimo/Desktop/PROYECTO_ANDROID/android/app/src/main/res/values/styles.xml",
+                    "source": "/Users/decimo/Desktop/GuanasFiresProyectoFinal/android/app/src/main/res/values/styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",
@@ -37,6 +37,23 @@
                         "startOffsets": "5259,6437",
                         "endColumns": "67,166",
                         "endOffsets": "5322,6599"
+                    }
+                },
+                {
+                    "source": "/Users/decimo/Desktop/GuanasFiresProyectoFinal/build/app/generated/res/google-services/debug/values/values.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,199,311,393,497,606,726,827",
+                        "endColumns": "143,111,81,103,108,119,100,77",
+                        "endOffsets": "194,306,388,492,601,721,822,900"
+                    },
+                    "to": {
+                        "startLines": "104,105,106,107,108,109,110,111",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "7730,7874,7986,8068,8172,8281,8401,8502",
+                        "endColumns": "143,111,81,103,108,119,100,77",
+                        "endOffsets": "7869,7981,8063,8167,8276,8396,8497,8575"
                     }
                 },
                 {
@@ -75,23 +92,6 @@
                         "endLines": "2,3,4,5,6,7,8,9,86,87,88,89,90,91,92,93,95,96,97,98,99,100,101,102,103,272,291",
                         "endColumns": "89,79,89,89,79,80,79,79,104,180,124,106,179,122,115,102,187,104,180,124,174,147,62,61,78,20,20",
                         "endOffsets": "190,270,360,450,530,611,691,771,5497,5678,5803,5910,6090,6213,6329,6432,6787,6892,7073,7198,7373,7521,7584,7646,7725,17726,18143"
-                    }
-                },
-                {
-                    "source": "/Users/decimo/Desktop/PROYECTO_ANDROID/build/app/generated/res/google-services/debug/values/values.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,199,311,393,497,606,726,827",
-                        "endColumns": "143,111,81,103,108,119,100,77",
-                        "endOffsets": "194,306,388,492,601,721,822,900"
-                    },
-                    "to": {
-                        "startLines": "104,105,106,107,108,109,110,111",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "7730,7874,7986,8068,8172,8281,8401,8502",
-                        "endColumns": "143,111,81,103,108,119,100,77",
-                        "endOffsets": "7869,7981,8063,8167,8276,8396,8497,8575"
                     }
                 }
             ]

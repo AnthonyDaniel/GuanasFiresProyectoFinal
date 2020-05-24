@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/decimo/Desktop/PROYECTO_ANDROID/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-watch-v20/values-watch-v20.xml",
+            "outputFile": "/Users/decimo/Desktop/GuanasFiresProyectoFinal/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-watch-v20/values-watch-v20.xml",
             "map": [
                 {
                     "source": "/Users/decimo/.gradle/caches/transforms-2/files-2.1/3fd4c02a55c6fc75c4a3663c6e89f71a/jetified-play-services-auth-16.0.1/res/values-watch-v20/values.xml",
