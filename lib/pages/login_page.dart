@@ -1,15 +1,15 @@
-import 'package:flutter/foundation.dart';
+
 import 'package:flutter/material.dart';
 import 'package:guanasfires/pages/app_navbar/home_page.dart';
-import 'package:guanasfires/pages/testCrud.dart';
-import '../services/auth_services/sign_in.dart';
 
+import '../services/auth_services/sign_in.dart';
 class LoginPage extends StatefulWidget {
   @override
   _LoginPageState createState() => _LoginPageState();
 }
 
 class _LoginPageState extends State<LoginPage> {
+  Sign_In googleAuth = new Sign_In();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,11 +41,11 @@ class _LoginPageState extends State<LoginPage> {
     return OutlineButton(
       splashColor: Colors.grey,
       onPressed: () {
-        signInWithGoogle().whenComplete(() {
+        googleAuth.signInWithGoogle().whenComplete(() {
           Navigator.of(context).push(
             MaterialPageRoute(
               builder: (context) {
-                return TestHome();
+                return HomePage();
               },
             ),
           );

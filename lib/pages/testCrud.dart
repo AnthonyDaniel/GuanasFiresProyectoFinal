@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'dart:async';
-
 import 'package:guanasfires/models/user.dart';
 
 class TestHome extends StatefulWidget {
@@ -16,7 +15,7 @@ class TestHome extends StatefulWidget {
 }
 
 class _TestHome extends State<TestHome> {
-  List<User> _todoList;
+  List<User> _usersList;
 
   final FirebaseDatabase _database = FirebaseDatabase.instance;
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
@@ -25,7 +24,7 @@ class _TestHome extends State<TestHome> {
   StreamSubscription<Event> _onTodoAddedSubscription;
   StreamSubscription<Event> _onTodoChangedSubscription;
 
-  Query _todoQuery;
+  Query _userQuery;
 
   //bool _isEmailVerified = false;
 
@@ -35,15 +34,15 @@ class _TestHome extends State<TestHome> {
 
     //_checkEmailVerification();
 
-    _todoList = new List();
-    _todoQuery = _database
+    _usersList = new List();
+    _userQuery = _database
         .reference()
-        .child("todo")
+        .child("users")
         .orderByChild("userId")
         .equalTo(widget.userId);
-    _onTodoAddedSubscription = _todoQuery.onChildAdded.listen(onEntryAdded);
+    _onTodoAddedSubscription = _userQuery.onChildAdded.listen(onEntryAdded);
     _onTodoChangedSubscription =
-        _todoQuery.onChildChanged.listen(onEntryChanged);
+        _userQuery.onChildChanged.listen(onEntryChanged);
   }
 
   @override
@@ -54,19 +53,19 @@ class _TestHome extends State<TestHome> {
   }
 
   onEntryChanged(Event event) {
-    var oldEntry = _todoList.singleWhere((entry) {
+    var oldEntry = _usersList.singleWhere((entry) {
       return entry.key == event.snapshot.key;
     });
 
     setState(() {
-      _todoList[_todoList.indexOf(oldEntry)] =
+      _usersList[_usersList.indexOf(oldEntry)] =
           User.fromSnapshot(event.snapshot);
     });
   }
 
   onEntryAdded(Event event) {
     setState(() {
-      _todoList.add(User.fromSnapshot(event.snapshot));
+      _usersList.add(User.fromSnapshot(event.snapshot));
     });
   }
 
@@ -81,23 +80,23 @@ class _TestHome extends State<TestHome> {
   addNewTodo(String todoItem) {
     if (todoItem.length > 0) {
       User todo = new User(todoItem.toString(), widget.userId, false);
-      _database.reference().child("todo").push().set(todo.toJson());
+      _database.reference().child("users").push().set(todo.toJson());
     }
   }
 
   updateTodo(User todo) {
     //Toggle completed
-    todo.completed = !todo.completed;
+    todo.admin = !todo.admin;
     if (todo != null) {
-      _database.reference().child("todo").child(todo.key).set(todo.toJson());
+      _database.reference().child("users").child(todo.key).set(todo.toJson());
     }
   }
 
   deleteTodo(String todoId, int index) {
-    _database.reference().child("todo").child(todoId).remove().then((_) {
+    _database.reference().child("users").child(todoId).remove().then((_) {
       print("Delete $todoId successful");
       setState(() {
-        _todoList.removeAt(index);
+        _usersList.removeAt(index);
       });
     });
   }
@@ -138,15 +137,15 @@ class _TestHome extends State<TestHome> {
   }
 
   Widget showTodoList() {
-    if (_todoList.length > 0) {
+    if (_usersList.length > 0) {
       return ListView.builder(
           shrinkWrap: true,
-          itemCount: _todoList.length,
+          itemCount: _usersList.length,
           itemBuilder: (BuildContext context, int index) {
-            String todoId = _todoList[index].key;
-            String subject = _todoList[index].subject;
-            bool completed = _todoList[index].completed;
-            String userId = _todoList[index].userId;
+            String todoId = _usersList[index].key;
+            String subject = _usersList[index].subject;
+            bool completed = _usersList[index].admin;
+            String userId = _usersList[index].userId;
             return Dismissible(
               key: Key(todoId),
               background: Container(color: Colors.red),
@@ -167,7 +166,7 @@ class _TestHome extends State<TestHome> {
                     )
                         : Icon(Icons.done, color: Colors.grey, size: 20.0),
                     onPressed: () {
-                      updateTodo(_todoList[index]);
+                      updateTodo(_usersList[index]);
                     }),
               ),
             );

@@ -8,8 +8,8 @@ import 'package:guanasfires/pages/widget/top_container.dart';
 import 'package:guanasfires/theme/colors/light_colors.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:flutter/cupertino.dart';
-import '../login_page.dart';
 import '../../services/auth_services/sign_in.dart';
+import '../login_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key key}) : super(key: key);
@@ -19,6 +19,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _Navbar extends State<HomePage> with TickerProviderStateMixin {
+  Sign_In googleAuth = new Sign_In();
   int _currentIndex = 0;
   final List<Widget> index = [
     Home(),AddFire(),Pending(),Profile(),Help()
@@ -164,7 +165,7 @@ class _Navbar extends State<HomePage> with TickerProviderStateMixin {
             new FlatButton(
               child: new Text("Si"),
               onPressed: () {
-                signOutGoogle();
+                googleAuth.signOutGoogle();
                 Navigator.of(context).pushAndRemoveUntil(
                     MaterialPageRoute(builder: (context) {
                       return LoginPage();
