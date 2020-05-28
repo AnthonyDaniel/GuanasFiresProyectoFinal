@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'dart:async';
@@ -143,7 +144,7 @@ class _TestHome extends State<TestHome> {
           itemCount: _usersList.length,
           itemBuilder: (BuildContext context, int index) {
             String todoId = _usersList[index].key;
-            String subject = _usersList[index].subject;
+            String subject = _usersList[index].email;
             bool completed = _usersList[index].admin;
             String userId = _usersList[index].userId;
             return Dismissible(
