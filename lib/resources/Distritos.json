@@ -1,0 +1,3355 @@
+[
+    {
+        "id": 1,
+        "codigo": "1",
+        "descripcion": "El Carmen",
+        "codProvi": "1",
+        "codCant": "1"
+    },
+    {
+        "id": 2,
+        "codigo": "1",
+        "descripcion": "Alajuelita",
+        "codProvi": "1",
+        "codCant": "10"
+    },
+    {
+        "id": 3,
+        "codigo": "1",
+        "descripcion": "San Isidro",
+        "codProvi": "1",
+        "codCant": "11"
+    },
+    {
+        "id": 4,
+        "codigo": "1",
+        "descripcion": "San Ignacio",
+        "codProvi": "1",
+        "codCant": "12"
+    },
+    {
+        "id": 5,
+        "codigo": "1",
+        "descripcion": "San Juan",
+        "codProvi": "1",
+        "codCant": "13"
+    },
+    {
+        "id": 6,
+        "codigo": "1",
+        "descripcion": "San Vicente",
+        "codProvi": "1",
+        "codCant": "14"
+    },
+    {
+        "id": 7,
+        "codigo": "1",
+        "descripcion": "San Pedro",
+        "codProvi": "1",
+        "codCant": "15"
+    },
+    {
+        "id": 8,
+        "codigo": "1",
+        "descripcion": "San Pablo",
+        "codProvi": "1",
+        "codCant": "16"
+    },
+    {
+        "id": 9,
+        "codigo": "1",
+        "descripcion": "Santa María",
+        "codProvi": "1",
+        "codCant": "17"
+    },
+    {
+        "id": 10,
+        "codigo": "1",
+        "descripcion": "Curridabat",
+        "codProvi": "1",
+        "codCant": "18"
+    },
+    {
+        "id": 11,
+        "codigo": "1",
+        "descripcion": "San Isidro de El General",
+        "codProvi": "1",
+        "codCant": "19"
+    },
+    {
+        "id": 12,
+        "codigo": "1",
+        "descripcion": "Escazú",
+        "codProvi": "1",
+        "codCant": "2"
+    },
+    {
+        "id": 13,
+        "codigo": "1",
+        "descripcion": "San Pablo",
+        "codProvi": "1",
+        "codCant": "20"
+    },
+    {
+        "id": 14,
+        "codigo": "1",
+        "descripcion": "Desamparados",
+        "codProvi": "1",
+        "codCant": "3"
+    },
+    {
+        "id": 15,
+        "codigo": "1",
+        "descripcion": "Santiago",
+        "codProvi": "1",
+        "codCant": "4"
+    },
+    {
+        "id": 16,
+        "codigo": "1",
+        "descripcion": "San Marcos",
+        "codProvi": "1",
+        "codCant": "5"
+    },
+    {
+        "id": 17,
+        "codigo": "1",
+        "descripcion": "Aserrí",
+        "codProvi": "1",
+        "codCant": "6"
+    },
+    {
+        "id": 18,
+        "codigo": "1",
+        "descripcion": "Colón",
+        "codProvi": "1",
+        "codCant": "7"
+    },
+    {
+        "id": 19,
+        "codigo": "1",
+        "descripcion": "Guadalupe",
+        "codProvi": "1",
+        "codCant": "8"
+    },
+    {
+        "id": 20,
+        "codigo": "1",
+        "descripcion": "Santa Ana",
+        "codProvi": "1",
+        "codCant": "9"
+    },
+    {
+        "id": 21,
+        "codigo": "1",
+        "descripcion": "Alajuela",
+        "codProvi": "2",
+        "codCant": "1"
+    },
+    {
+        "id": 22,
+        "codigo": "1",
+        "descripcion": "Quesada",
+        "codProvi": "2",
+        "codCant": "10"
+    },
+    {
+        "id": 23,
+        "codigo": "1",
+        "descripcion": "Zarcero",
+        "codProvi": "2",
+        "codCant": "11"
+    },
+    {
+        "id": 24,
+        "codigo": "1",
+        "descripcion": "Sarchí Norte",
+        "codProvi": "2",
+        "codCant": "12"
+    },
+    {
+        "id": 25,
+        "codigo": "1",
+        "descripcion": "Upala",
+        "codProvi": "2",
+        "codCant": "13"
+    },
+    {
+        "id": 26,
+        "codigo": "1",
+        "descripcion": "Los Chiles",
+        "codProvi": "2",
+        "codCant": "14"
+    },
+    {
+        "id": 27,
+        "codigo": "1",
+        "descripcion": "San Rafael",
+        "codProvi": "2",
+        "codCant": "15"
+    },
+    {
+        "id": 28,
+        "codigo": "1",
+        "descripcion": "San Ramón",
+        "codProvi": "2",
+        "codCant": "2"
+    },
+    {
+        "id": 29,
+        "codigo": "1",
+        "descripcion": "Grecia",
+        "codProvi": "2",
+        "codCant": "3"
+    },
+    {
+        "id": 30,
+        "codigo": "1",
+        "descripcion": "San Mateo",
+        "codProvi": "2",
+        "codCant": "4"
+    },
+    {
+        "id": 31,
+        "codigo": "1",
+        "descripcion": "Atenas",
+        "codProvi": "2",
+        "codCant": "5"
+    },
+    {
+        "id": 32,
+        "codigo": "1",
+        "descripcion": "Naranjo",
+        "codProvi": "2",
+        "codCant": "6"
+    },
+    {
+        "id": 33,
+        "codigo": "1",
+        "descripcion": "Palmares",
+        "codProvi": "2",
+        "codCant": "7"
+    },
+    {
+        "id": 34,
+        "codigo": "1",
+        "descripcion": "San Pedro",
+        "codProvi": "2",
+        "codCant": "8"
+    },
+    {
+        "id": 35,
+        "codigo": "1",
+        "descripcion": "Orotina",
+        "codProvi": "2",
+        "codCant": "9"
+    },
+    {
+        "id": 36,
+        "codigo": "1",
+        "descripcion": "Oriental",
+        "codProvi": "3",
+        "codCant": "1"
+    },
+    {
+        "id": 37,
+        "codigo": "1",
+        "descripcion": "Paraíso",
+        "codProvi": "3",
+        "codCant": "2"
+    },
+    {
+        "id": 38,
+        "codigo": "1",
+        "descripcion": "Tres Ríos",
+        "codProvi": "3",
+        "codCant": "3"
+    },
+    {
+        "id": 39,
+        "codigo": "1",
+        "descripcion": "Juan Viñas",
+        "codProvi": "3",
+        "codCant": "4"
+    },
+    {
+        "id": 40,
+        "codigo": "1",
+        "descripcion": "Turrialba",
+        "codProvi": "3",
+        "codCant": "5"
+    },
+    {
+        "id": 41,
+        "codigo": "1",
+        "descripcion": "Pacayas",
+        "codProvi": "3",
+        "codCant": "6"
+    },
+    {
+        "id": 42,
+        "codigo": "1",
+        "descripcion": "San Rafael",
+        "codProvi": "3",
+        "codCant": "7"
+    },
+    {
+        "id": 43,
+        "codigo": "1",
+        "descripcion": "El Tejar",
+        "codProvi": "3",
+        "codCant": "8"
+    },
+    {
+        "id": 44,
+        "codigo": "1",
+        "descripcion": "Heredia",
+        "codProvi": "4",
+        "codCant": "1"
+    },
+    {
+        "id": 45,
+        "codigo": "1",
+        "descripcion": "Puerto Viejo",
+        "codProvi": "4",
+        "codCant": "10"
+    },
+    {
+        "id": 46,
+        "codigo": "1",
+        "descripcion": "Barva",
+        "codProvi": "4",
+        "codCant": "2"
+    },
+    {
+        "id": 47,
+        "codigo": "1",
+        "descripcion": "Santo Domingo",
+        "codProvi": "4",
+        "codCant": "3"
+    },
+    {
+        "id": 48,
+        "codigo": "1",
+        "descripcion": "Santa Bárbara",
+        "codProvi": "4",
+        "codCant": "4"
+    },
+    {
+        "id": 49,
+        "codigo": "1",
+        "descripcion": "San Rafael",
+        "codProvi": "4",
+        "codCant": "5"
+    },
+    {
+        "id": 50,
+        "codigo": "1",
+        "descripcion": "San Isidro",
+        "codProvi": "4",
+        "codCant": "6"
+    },
+    {
+        "id": 51,
+        "codigo": "1",
+        "descripcion": "San Antonio",
+        "codProvi": "4",
+        "codCant": "7"
+    },
+    {
+        "id": 52,
+        "codigo": "1",
+        "descripcion": "San Joaquín",
+        "codProvi": "4",
+        "codCant": "8"
+    },
+    {
+        "id": 53,
+        "codigo": "1",
+        "descripcion": "San Pablo",
+        "codProvi": "4",
+        "codCant": "9"
+    },
+    {
+        "id": 54,
+        "codigo": "1",
+        "descripcion": "Liberia",
+        "codProvi": "5",
+        "codCant": "1"
+    },
+    {
+        "id": 55,
+        "codigo": "1",
+        "descripcion": "La Cruz",
+        "codProvi": "5",
+        "codCant": "10"
+    },
+    {
+        "id": 56,
+        "codigo": "1",
+        "descripcion": "Hojancha",
+        "codProvi": "5",
+        "codCant": "11"
+    },
+    {
+        "id": 57,
+        "codigo": "1",
+        "descripcion": "Nicoya",
+        "codProvi": "5",
+        "codCant": "2"
+    },
+    {
+        "id": 58,
+        "codigo": "1",
+        "descripcion": "Santa Cruz",
+        "codProvi": "5",
+        "codCant": "3"
+    },
+    {
+        "id": 59,
+        "codigo": "1",
+        "descripcion": "Bagaces",
+        "codProvi": "5",
+        "codCant": "4"
+    },
+    {
+        "id": 60,
+        "codigo": "1",
+        "descripcion": "Filadelfia",
+        "codProvi": "5",
+        "codCant": "5"
+    },
+    {
+        "id": 61,
+        "codigo": "1",
+        "descripcion": "Cañas",
+        "codProvi": "5",
+        "codCant": "6"
+    },
+    {
+        "id": 62,
+        "codigo": "1",
+        "descripcion": "Juntas",
+        "codProvi": "5",
+        "codCant": "7"
+    },
+    {
+        "id": 63,
+        "codigo": "1",
+        "descripcion": "Tilarán",
+        "codProvi": "5",
+        "codCant": "8"
+    },
+    {
+        "id": 64,
+        "codigo": "1",
+        "descripcion": "Carmona",
+        "codProvi": "5",
+        "codCant": "9"
+    },
+    {
+        "id": 65,
+        "codigo": "1",
+        "descripcion": "Puntarenas",
+        "codProvi": "6",
+        "codCant": "1"
+    },
+    {
+        "id": 66,
+        "codigo": "1",
+        "descripcion": "Corredor",
+        "codProvi": "6",
+        "codCant": "10"
+    },
+    {
+        "id": 67,
+        "codigo": "1",
+        "descripcion": "Jacó",
+        "codProvi": "6",
+        "codCant": "11"
+    },
+    {
+        "id": 68,
+        "codigo": "1",
+        "descripcion": "Espíritu Santo",
+        "codProvi": "6",
+        "codCant": "2"
+    },
+    {
+        "id": 69,
+        "codigo": "1",
+        "descripcion": "Buenos Aires",
+        "codProvi": "6",
+        "codCant": "3"
+    },
+    {
+        "id": 70,
+        "codigo": "1",
+        "descripcion": "Miramar",
+        "codProvi": "6",
+        "codCant": "4"
+    },
+    {
+        "id": 71,
+        "codigo": "1",
+        "descripcion": "Puerto Cortés",
+        "codProvi": "6",
+        "codCant": "5"
+    },
+    {
+        "id": 72,
+        "codigo": "1",
+        "descripcion": "Quepos",
+        "codProvi": "6",
+        "codCant": "6"
+    },
+    {
+        "id": 73,
+        "codigo": "1",
+        "descripcion": "Golfito",
+        "codProvi": "6",
+        "codCant": "7"
+    },
+    {
+        "id": 74,
+        "codigo": "1",
+        "descripcion": "San Vito",
+        "codProvi": "6",
+        "codCant": "8"
+    },
+    {
+        "id": 75,
+        "codigo": "1",
+        "descripcion": "Parrita",
+        "codProvi": "6",
+        "codCant": "9"
+    },
+    {
+        "id": 76,
+        "codigo": "1",
+        "descripcion": "Limón",
+        "codProvi": "7",
+        "codCant": "1"
+    },
+    {
+        "id": 77,
+        "codigo": "1",
+        "descripcion": "Guápiles",
+        "codProvi": "7",
+        "codCant": "2"
+    },
+    {
+        "id": 78,
+        "codigo": "1",
+        "descripcion": "Siquirres",
+        "codProvi": "7",
+        "codCant": "3"
+    },
+    {
+        "id": 79,
+        "codigo": "1",
+        "descripcion": "Bratsi",
+        "codProvi": "7",
+        "codCant": "4"
+    },
+    {
+        "id": 80,
+        "codigo": "1",
+        "descripcion": "Matina",
+        "codProvi": "7",
+        "codCant": "5"
+    },
+    {
+        "id": 81,
+        "codigo": "1",
+        "descripcion": "Guácimo",
+        "codProvi": "7",
+        "codCant": "6"
+    },
+    {
+        "id": 82,
+        "codigo": "10",
+        "descripcion": "Hatillo",
+        "codProvi": "1",
+        "codCant": "1"
+    },
+    {
+        "id": 83,
+        "codigo": "10",
+        "descripcion": "Río Nuevo",
+        "codProvi": "1",
+        "codCant": "19"
+    },
+    {
+        "id": 84,
+        "codigo": "10",
+        "descripcion": "Damas",
+        "codProvi": "1",
+        "codCant": "3"
+    },
+    {
+        "id": 85,
+        "codigo": "10",
+        "descripcion": "Desamparados",
+        "codProvi": "2",
+        "codCant": "1"
+    },
+    {
+        "id": 86,
+        "codigo": "10",
+        "descripcion": "Venado",
+        "codProvi": "2",
+        "codCant": "10"
+    },
+    {
+        "id": 87,
+        "codigo": "10",
+        "descripcion": "Volio",
+        "codProvi": "2",
+        "codCant": "2"
+    },
+    {
+        "id": 88,
+        "codigo": "10",
+        "descripcion": "Llano Grande",
+        "codProvi": "3",
+        "codCant": "1"
+    },
+    {
+        "id": 89,
+        "codigo": "10",
+        "descripcion": "Tres Equis",
+        "codProvi": "3",
+        "codCant": "5"
+    },
+    {
+        "id": 90,
+        "codigo": "11",
+        "descripcion": "San Sebastián",
+        "codProvi": "1",
+        "codCant": "1"
+    },
+    {
+        "id": 91,
+        "codigo": "11",
+        "descripcion": "Páramo",
+        "codProvi": "1",
+        "codCant": "19"
+    },
+    {
+        "id": 92,
+        "codigo": "11",
+        "descripcion": "San Rafael Abajo",
+        "codProvi": "1",
+        "codCant": "3"
+    },
+    {
+        "id": 93,
+        "codigo": "11",
+        "descripcion": "Turrúcares",
+        "codProvi": "2",
+        "codCant": "1"
+    },
+    {
+        "id": 94,
+        "codigo": "11",
+        "descripcion": "Cutris",
+        "codProvi": "2",
+        "codCant": "10"
+    },
+    {
+        "id": 95,
+        "codigo": "11",
+        "descripcion": "Concepción",
+        "codProvi": "2",
+        "codCant": "2"
+    },
+    {
+        "id": 96,
+        "codigo": "11",
+        "descripcion": "Quebradilla",
+        "codProvi": "3",
+        "codCant": "1"
+    },
+    {
+        "id": 97,
+        "codigo": "11",
+        "descripcion": "La Isabel",
+        "codProvi": "3",
+        "codCant": "5"
+    },
+    {
+        "id": 98,
+        "codigo": "11",
+        "descripcion": "Cóbano",
+        "codProvi": "6",
+        "codCant": "1"
+    },
+    {
+        "id": 99,
+        "codigo": "12",
+        "descripcion": "Gravilias",
+        "codProvi": "1",
+        "codCant": "3"
+    },
+    {
+        "id": 100,
+        "codigo": "12",
+        "descripcion": "Tambor",
+        "codProvi": "2",
+        "codCant": "1"
+    },
+    {
+        "id": 101,
+        "codigo": "12",
+        "descripcion": "Monterrey",
+        "codProvi": "2",
+        "codCant": "10"
+    },
+    {
+        "id": 102,
+        "codigo": "12",
+        "descripcion": "Zapotal",
+        "codProvi": "2",
+        "codCant": "2"
+    },
+    {
+        "id": 103,
+        "codigo": "12",
+        "descripcion": "Chirripó",
+        "codProvi": "3",
+        "codCant": "5"
+    },
+    {
+        "id": 104,
+        "codigo": "12",
+        "descripcion": "Chacarita",
+        "codProvi": "6",
+        "codCant": "1"
+    },
+    {
+        "id": 105,
+        "codigo": "13",
+        "descripcion": "Los Guido",
+        "codProvi": "1",
+        "codCant": "3"
+    },
+    {
+        "id": 106,
+        "codigo": "13",
+        "descripcion": "La Garita",
+        "codProvi": "2",
+        "codCant": "1"
+    },
+    {
+        "id": 107,
+        "codigo": "13",
+        "descripcion": "Pocosol",
+        "codProvi": "2",
+        "codCant": "10"
+    },
+    {
+        "id": 108,
+        "codigo": "13",
+        "descripcion": "Peñas Blancas",
+        "codProvi": "2",
+        "codCant": "2"
+    },
+    {
+        "id": 109,
+        "codigo": "13",
+        "descripcion": "Chira",
+        "codProvi": "6",
+        "codCant": "1"
+    },
+    {
+        "id": 110,
+        "codigo": "14",
+        "descripcion": "Sarapiquí",
+        "codProvi": "2",
+        "codCant": "1"
+    },
+    {
+        "id": 111,
+        "codigo": "14",
+        "descripcion": "Acapulco",
+        "codProvi": "6",
+        "codCant": "1"
+    },
+    {
+        "id": 112,
+        "codigo": "15",
+        "descripcion": "El Roble",
+        "codProvi": "6",
+        "codCant": "1"
+    },
+    {
+        "id": 113,
+        "codigo": "16",
+        "descripcion": "Arancibia",
+        "codProvi": "6",
+        "codCant": "1"
+    },
+    {
+        "id": 114,
+        "codigo": "2",
+        "descripcion": "Merced",
+        "codProvi": "1",
+        "codCant": "1"
+    },
+    {
+        "id": 115,
+        "codigo": "2",
+        "descripcion": "San Josecito",
+        "codProvi": "1",
+        "codCant": "10"
+    },
+    {
+        "id": 116,
+        "codigo": "2",
+        "descripcion": "San Rafael",
+        "codProvi": "1",
+        "codCant": "11"
+    },
+    {
+        "id": 117,
+        "codigo": "2",
+        "descripcion": "Guaitíl",
+        "codProvi": "1",
+        "codCant": "12"
+    },
+    {
+        "id": 118,
+        "codigo": "2",
+        "descripcion": "Cinco Esquinas",
+        "codProvi": "1",
+        "codCant": "13"
+    },
+    {
+        "id": 119,
+        "codigo": "2",
+        "descripcion": "San Jerónimo",
+        "codProvi": "1",
+        "codCant": "14"
+    },
+    {
+        "id": 120,
+        "codigo": "2",
+        "descripcion": "Sabanilla",
+        "codProvi": "1",
+        "codCant": "15"
+    },
+    {
+        "id": 121,
+        "codigo": "2",
+        "descripcion": "San Pedro",
+        "codProvi": "1",
+        "codCant": "16"
+    },
+    {
+        "id": 122,
+        "codigo": "2",
+        "descripcion": "Jardín",
+        "codProvi": "1",
+        "codCant": "17"
+    },
+    {
+        "id": 123,
+        "codigo": "2",
+        "descripcion": "Granadilla",
+        "codProvi": "1",
+        "codCant": "18"
+    },
+    {
+        "id": 124,
+        "codigo": "2",
+        "descripcion": "General",
+        "codProvi": "1",
+        "codCant": "19"
+    },
+    {
+        "id": 125,
+        "codigo": "2",
+        "descripcion": "San Antonio",
+        "codProvi": "1",
+        "codCant": "2"
+    },
+    {
+        "id": 126,
+        "codigo": "2",
+        "descripcion": "San Andrés",
+        "codProvi": "1",
+        "codCant": "20"
+    },
+    {
+        "id": 127,
+        "codigo": "2",
+        "descripcion": "San Miguel",
+        "codProvi": "1",
+        "codCant": "3"
+    },
+    {
+        "id": 128,
+        "codigo": "2",
+        "descripcion": "Mercedes Sur",
+        "codProvi": "1",
+        "codCant": "4"
+    },
+    {
+        "id": 129,
+        "codigo": "2",
+        "descripcion": "San Lorenzo",
+        "codProvi": "1",
+        "codCant": "5"
+    },
+    {
+        "id": 130,
+        "codigo": "2",
+        "descripcion": "Tarbaca",
+        "codProvi": "1",
+        "codCant": "6"
+    },
+    {
+        "id": 131,
+        "codigo": "2",
+        "descripcion": "Guayabo",
+        "codProvi": "1",
+        "codCant": "7"
+    },
+    {
+        "id": 132,
+        "codigo": "2",
+        "descripcion": "San Francisco",
+        "codProvi": "1",
+        "codCant": "8"
+    },
+    {
+        "id": 133,
+        "codigo": "2",
+        "descripcion": "Salitral",
+        "codProvi": "1",
+        "codCant": "9"
+    },
+    {
+        "id": 134,
+        "codigo": "2",
+        "descripcion": "San José",
+        "codProvi": "2",
+        "codCant": "1"
+    },
+    {
+        "id": 135,
+        "codigo": "2",
+        "descripcion": "Florencia",
+        "codProvi": "2",
+        "codCant": "10"
+    },
+    {
+        "id": 136,
+        "codigo": "2",
+        "descripcion": "Laguna",
+        "codProvi": "2",
+        "codCant": "11"
+    },
+    {
+        "id": 137,
+        "codigo": "2",
+        "descripcion": "Sarchí Sur",
+        "codProvi": "2",
+        "codCant": "12"
+    },
+    {
+        "id": 138,
+        "codigo": "2",
+        "descripcion": "Aguas Claras",
+        "codProvi": "2",
+        "codCant": "13"
+    },
+    {
+        "id": 139,
+        "codigo": "2",
+        "descripcion": "Caño Negro",
+        "codProvi": "2",
+        "codCant": "14"
+    },
+    {
+        "id": 140,
+        "codigo": "2",
+        "descripcion": "Buenavista",
+        "codProvi": "2",
+        "codCant": "15"
+    },
+    {
+        "id": 141,
+        "codigo": "2",
+        "descripcion": "Santiago",
+        "codProvi": "2",
+        "codCant": "2"
+    },
+    {
+        "id": 142,
+        "codigo": "2",
+        "descripcion": "San Isidro",
+        "codProvi": "2",
+        "codCant": "3"
+    },
+    {
+        "id": 143,
+        "codigo": "2",
+        "descripcion": "Desmonte",
+        "codProvi": "2",
+        "codCant": "4"
+    },
+    {
+        "id": 144,
+        "codigo": "2",
+        "descripcion": "Jesús",
+        "codProvi": "2",
+        "codCant": "5"
+    },
+    {
+        "id": 145,
+        "codigo": "2",
+        "descripcion": "San Miguel",
+        "codProvi": "2",
+        "codCant": "6"
+    },
+    {
+        "id": 146,
+        "codigo": "2",
+        "descripcion": "Zaragoza",
+        "codProvi": "2",
+        "codCant": "7"
+    },
+    {
+        "id": 147,
+        "codigo": "2",
+        "descripcion": "San Juan",
+        "codProvi": "2",
+        "codCant": "8"
+    },
+    {
+        "id": 148,
+        "codigo": "2",
+        "descripcion": "Mastate",
+        "codProvi": "2",
+        "codCant": "9"
+    },
+    {
+        "id": 149,
+        "codigo": "2",
+        "descripcion": "Occidental",
+        "codProvi": "3",
+        "codCant": "1"
+    },
+    {
+        "id": 150,
+        "codigo": "2",
+        "descripcion": "Santiago",
+        "codProvi": "3",
+        "codCant": "2"
+    },
+    {
+        "id": 151,
+        "codigo": "2",
+        "descripcion": "San Diego",
+        "codProvi": "3",
+        "codCant": "3"
+    },
+    {
+        "id": 152,
+        "codigo": "2",
+        "descripcion": "Tucurrique",
+        "codProvi": "3",
+        "codCant": "4"
+    },
+    {
+        "id": 153,
+        "codigo": "2",
+        "descripcion": "La Suiza",
+        "codProvi": "3",
+        "codCant": "5"
+    },
+    {
+        "id": 154,
+        "codigo": "2",
+        "descripcion": "Cervantes",
+        "codProvi": "3",
+        "codCant": "6"
+    },
+    {
+        "id": 155,
+        "codigo": "2",
+        "descripcion": "Cot",
+        "codProvi": "3",
+        "codCant": "7"
+    },
+    {
+        "id": 156,
+        "codigo": "2",
+        "descripcion": "San Isidro",
+        "codProvi": "3",
+        "codCant": "8"
+    },
+    {
+        "id": 157,
+        "codigo": "2",
+        "descripcion": "Mercedes",
+        "codProvi": "4",
+        "codCant": "1"
+    },
+    {
+        "id": 158,
+        "codigo": "2",
+        "descripcion": "La Vírgen",
+        "codProvi": "4",
+        "codCant": "10"
+    },
+    {
+        "id": 159,
+        "codigo": "2",
+        "descripcion": "San Pedro",
+        "codProvi": "4",
+        "codCant": "2"
+    },
+    {
+        "id": 160,
+        "codigo": "2",
+        "descripcion": "San Vicente",
+        "codProvi": "4",
+        "codCant": "3"
+    },
+    {
+        "id": 161,
+        "codigo": "2",
+        "descripcion": "San Pedro",
+        "codProvi": "4",
+        "codCant": "4"
+    },
+    {
+        "id": 162,
+        "codigo": "2",
+        "descripcion": "San Josecito",
+        "codProvi": "4",
+        "codCant": "5"
+    },
+    {
+        "id": 163,
+        "codigo": "2",
+        "descripcion": "San José",
+        "codProvi": "4",
+        "codCant": "6"
+    },
+    {
+        "id": 164,
+        "codigo": "2",
+        "descripcion": "Rivera",
+        "codProvi": "4",
+        "codCant": "7"
+    },
+    {
+        "id": 165,
+        "codigo": "2",
+        "descripcion": "Barrantes",
+        "codProvi": "4",
+        "codCant": "8"
+    },
+    {
+        "id": 166,
+        "codigo": "2",
+        "descripcion": "Cañas Dulces",
+        "codProvi": "5",
+        "codCant": "1"
+    },
+    {
+        "id": 167,
+        "codigo": "2",
+        "descripcion": "Santa Cecilia",
+        "codProvi": "5",
+        "codCant": "10"
+    },
+    {
+        "id": 168,
+        "codigo": "2",
+        "descripcion": "Monte Romo",
+        "codProvi": "5",
+        "codCant": "11"
+    },
+    {
+        "id": 169,
+        "codigo": "2",
+        "descripcion": "Mansión",
+        "codProvi": "5",
+        "codCant": "2"
+    },
+    {
+        "id": 170,
+        "codigo": "2",
+        "descripcion": "Bolsón",
+        "codProvi": "5",
+        "codCant": "3"
+    },
+    {
+        "id": 171,
+        "codigo": "2",
+        "descripcion": "Fortuna",
+        "codProvi": "5",
+        "codCant": "4"
+    },
+    {
+        "id": 172,
+        "codigo": "2",
+        "descripcion": "Palmira",
+        "codProvi": "5",
+        "codCant": "5"
+    },
+    {
+        "id": 173,
+        "codigo": "2",
+        "descripcion": "Palmira",
+        "codProvi": "5",
+        "codCant": "6"
+    },
+    {
+        "id": 174,
+        "codigo": "2",
+        "descripcion": "Sierra",
+        "codProvi": "5",
+        "codCant": "7"
+    },
+    {
+        "id": 175,
+        "codigo": "2",
+        "descripcion": "Quebrada Grande",
+        "codProvi": "5",
+        "codCant": "8"
+    },
+    {
+        "id": 176,
+        "codigo": "2",
+        "descripcion": "Santa Rita",
+        "codProvi": "5",
+        "codCant": "9"
+    },
+    {
+        "id": 177,
+        "codigo": "2",
+        "descripcion": "Pitahaya",
+        "codProvi": "6",
+        "codCant": "1"
+    },
+    {
+        "id": 178,
+        "codigo": "2",
+        "descripcion": "La Cuesta",
+        "codProvi": "6",
+        "codCant": "10"
+    },
+    {
+        "id": 179,
+        "codigo": "2",
+        "descripcion": "Tárcoles",
+        "codProvi": "6",
+        "codCant": "11"
+    },
+    {
+        "id": 180,
+        "codigo": "2",
+        "descripcion": "San Juan Grande",
+        "codProvi": "6",
+        "codCant": "2"
+    },
+    {
+        "id": 181,
+        "codigo": "2",
+        "descripcion": "Volcán",
+        "codProvi": "6",
+        "codCant": "3"
+    },
+    {
+        "id": 182,
+        "codigo": "2",
+        "descripcion": "Unión",
+        "codProvi": "6",
+        "codCant": "4"
+    },
+    {
+        "id": 183,
+        "codigo": "2",
+        "descripcion": "Palmar",
+        "codProvi": "6",
+        "codCant": "5"
+    },
+    {
+        "id": 184,
+        "codigo": "2",
+        "descripcion": "Savegre",
+        "codProvi": "6",
+        "codCant": "6"
+    },
+    {
+        "id": 185,
+        "codigo": "2",
+        "descripcion": "Puerto Jiménez",
+        "codProvi": "6",
+        "codCant": "7"
+    },
+    {
+        "id": 186,
+        "codigo": "2",
+        "descripcion": "Sabalito",
+        "codProvi": "6",
+        "codCant": "8"
+    },
+    {
+        "id": 187,
+        "codigo": "2",
+        "descripcion": "Valle La Estrella",
+        "codProvi": "7",
+        "codCant": "1"
+    },
+    {
+        "id": 188,
+        "codigo": "2",
+        "descripcion": "Jiménez",
+        "codProvi": "7",
+        "codCant": "2"
+    },
+    {
+        "id": 189,
+        "codigo": "2",
+        "descripcion": "Pacuarito",
+        "codProvi": "7",
+        "codCant": "3"
+    },
+    {
+        "id": 190,
+        "codigo": "2",
+        "descripcion": "Sixaola",
+        "codProvi": "7",
+        "codCant": "4"
+    },
+    {
+        "id": 191,
+        "codigo": "2",
+        "descripcion": "Batán",
+        "codProvi": "7",
+        "codCant": "5"
+    },
+    {
+        "id": 192,
+        "codigo": "2",
+        "descripcion": "Mercedes",
+        "codProvi": "7",
+        "codCant": "6"
+    },
+    {
+        "id": 193,
+        "codigo": "3",
+        "descripcion": "Hospital",
+        "codProvi": "1",
+        "codCant": "1"
+    },
+    {
+        "id": 194,
+        "codigo": "3",
+        "descripcion": "San Antonio",
+        "codProvi": "1",
+        "codCant": "10"
+    },
+    {
+        "id": 195,
+        "codigo": "3",
+        "descripcion": "Dulce Nombre de Jesús",
+        "codProvi": "1",
+        "codCant": "11"
+    },
+    {
+        "id": 196,
+        "codigo": "3",
+        "descripcion": "Palmichal",
+        "codProvi": "1",
+        "codCant": "12"
+    },
+    {
+        "id": 197,
+        "codigo": "3",
+        "descripcion": "Anselmo Llorente",
+        "codProvi": "1",
+        "codCant": "13"
+    },
+    {
+        "id": 198,
+        "codigo": "3",
+        "descripcion": "Trinidad",
+        "codProvi": "1",
+        "codCant": "14"
+    },
+    {
+        "id": 199,
+        "codigo": "3",
+        "descripcion": "Mercedes",
+        "codProvi": "1",
+        "codCant": "15"
+    },
+    {
+        "id": 200,
+        "codigo": "3",
+        "descripcion": "San Juan de Mata",
+        "codProvi": "1",
+        "codCant": "16"
+    },
+    {
+        "id": 201,
+        "codigo": "3",
+        "descripcion": "Copey",
+        "codProvi": "1",
+        "codCant": "17"
+    },
+    {
+        "id": 202,
+        "codigo": "3",
+        "descripcion": "Sánchez",
+        "codProvi": "1",
+        "codCant": "18"
+    },
+    {
+        "id": 203,
+        "codigo": "3",
+        "descripcion": "Daniel Flores",
+        "codProvi": "1",
+        "codCant": "19"
+    },
+    {
+        "id": 204,
+        "codigo": "3",
+        "descripcion": "San Rafael",
+        "codProvi": "1",
+        "codCant": "2"
+    },
+    {
+        "id": 205,
+        "codigo": "3",
+        "descripcion": "Llano Bonito",
+        "codProvi": "1",
+        "codCant": "20"
+    },
+    {
+        "id": 206,
+        "codigo": "3",
+        "descripcion": "San Juan de Dios",
+        "codProvi": "1",
+        "codCant": "3"
+    },
+    {
+        "id": 207,
+        "codigo": "3",
+        "descripcion": "Barbacoas",
+        "codProvi": "1",
+        "codCant": "4"
+    },
+    {
+        "id": 208,
+        "codigo": "3",
+        "descripcion": "San Carlos",
+        "codProvi": "1",
+        "codCant": "5"
+    },
+    {
+        "id": 209,
+        "codigo": "3",
+        "descripcion": "Vuelta de Jorco",
+        "codProvi": "1",
+        "codCant": "6"
+    },
+    {
+        "id": 210,
+        "codigo": "3",
+        "descripcion": "Tabarcia",
+        "codProvi": "1",
+        "codCant": "7"
+    },
+    {
+        "id": 211,
+        "codigo": "3",
+        "descripcion": "Calle Blancos",
+        "codProvi": "1",
+        "codCant": "8"
+    },
+    {
+        "id": 212,
+        "codigo": "3",
+        "descripcion": "Pozos",
+        "codProvi": "1",
+        "codCant": "9"
+    },
+    {
+        "id": 213,
+        "codigo": "3",
+        "descripcion": "Carrizal",
+        "codProvi": "2",
+        "codCant": "1"
+    },
+    {
+        "id": 214,
+        "codigo": "3",
+        "descripcion": "Buenavista",
+        "codProvi": "2",
+        "codCant": "10"
+    },
+    {
+        "id": 215,
+        "codigo": "3",
+        "descripcion": "Tapezco",
+        "codProvi": "2",
+        "codCant": "11"
+    },
+    {
+        "id": 216,
+        "codigo": "3",
+        "descripcion": "Toro Amarillo",
+        "codProvi": "2",
+        "codCant": "12"
+    },
+    {
+        "id": 217,
+        "codigo": "3",
+        "descripcion": "San José o Pizote",
+        "codProvi": "2",
+        "codCant": "13"
+    },
+    {
+        "id": 218,
+        "codigo": "3",
+        "descripcion": "El Amparo",
+        "codProvi": "2",
+        "codCant": "14"
+    },
+    {
+        "id": 219,
+        "codigo": "3",
+        "descripcion": "Cote",
+        "codProvi": "2",
+        "codCant": "15"
+    },
+    {
+        "id": 220,
+        "codigo": "3",
+        "descripcion": "San Juan",
+        "codProvi": "2",
+        "codCant": "2"
+    },
+    {
+        "id": 221,
+        "codigo": "3",
+        "descripcion": "San José",
+        "codProvi": "2",
+        "codCant": "3"
+    },
+    {
+        "id": 222,
+        "codigo": "3",
+        "descripcion": "Jesús María",
+        "codProvi": "2",
+        "codCant": "4"
+    },
+    {
+        "id": 223,
+        "codigo": "3",
+        "descripcion": "Mercedes",
+        "codProvi": "2",
+        "codCant": "5"
+    },
+    {
+        "id": 224,
+        "codigo": "3",
+        "descripcion": "San José",
+        "codProvi": "2",
+        "codCant": "6"
+    },
+    {
+        "id": 225,
+        "codigo": "3",
+        "descripcion": "Buenos Aires",
+        "codProvi": "2",
+        "codCant": "7"
+    },
+    {
+        "id": 226,
+        "codigo": "3",
+        "descripcion": "San Rafael",
+        "codProvi": "2",
+        "codCant": "8"
+    },
+    {
+        "id": 227,
+        "codigo": "3",
+        "descripcion": "Hacienda Vieja",
+        "codProvi": "2",
+        "codCant": "9"
+    },
+    {
+        "id": 228,
+        "codigo": "3",
+        "descripcion": "Carmen",
+        "codProvi": "3",
+        "codCant": "1"
+    },
+    {
+        "id": 229,
+        "codigo": "3",
+        "descripcion": "Orosi",
+        "codProvi": "3",
+        "codCant": "2"
+    },
+    {
+        "id": 230,
+        "codigo": "3",
+        "descripcion": "San Juan",
+        "codProvi": "3",
+        "codCant": "3"
+    },
+    {
+        "id": 231,
+        "codigo": "3",
+        "descripcion": "Pejibaye",
+        "codProvi": "3",
+        "codCant": "4"
+    },
+    {
+        "id": 232,
+        "codigo": "3",
+        "descripcion": "Peralta",
+        "codProvi": "3",
+        "codCant": "5"
+    },
+    {
+        "id": 233,
+        "codigo": "3",
+        "descripcion": "Capellades",
+        "codProvi": "3",
+        "codCant": "6"
+    },
+    {
+        "id": 234,
+        "codigo": "3",
+        "descripcion": "Potrero Cerrado",
+        "codProvi": "3",
+        "codCant": "7"
+    },
+    {
+        "id": 235,
+        "codigo": "3",
+        "descripcion": "Tobosi",
+        "codProvi": "3",
+        "codCant": "8"
+    },
+    {
+        "id": 236,
+        "codigo": "3",
+        "descripcion": "San Francisco",
+        "codProvi": "4",
+        "codCant": "1"
+    },
+    {
+        "id": 237,
+        "codigo": "3",
+        "descripcion": "Horquetas",
+        "codProvi": "4",
+        "codCant": "10"
+    },
+    {
+        "id": 238,
+        "codigo": "3",
+        "descripcion": "San Pablo",
+        "codProvi": "4",
+        "codCant": "2"
+    },
+    {
+        "id": 239,
+        "codigo": "3",
+        "descripcion": "San Miguel",
+        "codProvi": "4",
+        "codCant": "3"
+    },
+    {
+        "id": 240,
+        "codigo": "3",
+        "descripcion": "San Juan",
+        "codProvi": "4",
+        "codCant": "4"
+    },
+    {
+        "id": 241,
+        "codigo": "3",
+        "descripcion": "Santiago",
+        "codProvi": "4",
+        "codCant": "5"
+    },
+    {
+        "id": 242,
+        "codigo": "3",
+        "descripcion": "Concepción",
+        "codProvi": "4",
+        "codCant": "6"
+    },
+    {
+        "id": 243,
+        "codigo": "3",
+        "descripcion": "Asunción",
+        "codProvi": "4",
+        "codCant": "7"
+    },
+    {
+        "id": 244,
+        "codigo": "3",
+        "descripcion": "Llorente",
+        "codProvi": "4",
+        "codCant": "8"
+    },
+    {
+        "id": 245,
+        "codigo": "3",
+        "descripcion": "Mayorga",
+        "codProvi": "5",
+        "codCant": "1"
+    },
+    {
+        "id": 246,
+        "codigo": "3",
+        "descripcion": "Garita",
+        "codProvi": "5",
+        "codCant": "10"
+    },
+    {
+        "id": 247,
+        "codigo": "3",
+        "descripcion": "Puerto Carrillo",
+        "codProvi": "5",
+        "codCant": "11"
+    },
+    {
+        "id": 248,
+        "codigo": "3",
+        "descripcion": "San Antonio",
+        "codProvi": "5",
+        "codCant": "2"
+    },
+    {
+        "id": 249,
+        "codigo": "3",
+        "descripcion": "27 de Abril",
+        "codProvi": "5",
+        "codCant": "3"
+    },
+    {
+        "id": 250,
+        "codigo": "3",
+        "descripcion": "Mogote",
+        "codProvi": "5",
+        "codCant": "4"
+    },
+    {
+        "id": 251,
+        "codigo": "3",
+        "descripcion": "Sardinal",
+        "codProvi": "5",
+        "codCant": "5"
+    },
+    {
+        "id": 252,
+        "codigo": "3",
+        "descripcion": "San Miguel",
+        "codProvi": "5",
+        "codCant": "6"
+    },
+    {
+        "id": 253,
+        "codigo": "3",
+        "descripcion": "San Juan",
+        "codProvi": "5",
+        "codCant": "7"
+    },
+    {
+        "id": 254,
+        "codigo": "3",
+        "descripcion": "Tronadora",
+        "codProvi": "5",
+        "codCant": "8"
+    },
+    {
+        "id": 255,
+        "codigo": "3",
+        "descripcion": "Zapotal",
+        "codProvi": "5",
+        "codCant": "9"
+    },
+    {
+        "id": 256,
+        "codigo": "3",
+        "descripcion": "Chomes",
+        "codProvi": "6",
+        "codCant": "1"
+    },
+    {
+        "id": 257,
+        "codigo": "3",
+        "descripcion": "Canoas",
+        "codProvi": "6",
+        "codCant": "10"
+    },
+    {
+        "id": 258,
+        "codigo": "3",
+        "descripcion": "Macacona",
+        "codProvi": "6",
+        "codCant": "2"
+    },
+    {
+        "id": 259,
+        "codigo": "3",
+        "descripcion": "Potrero Grande",
+        "codProvi": "6",
+        "codCant": "3"
+    },
+    {
+        "id": 260,
+        "codigo": "3",
+        "descripcion": "San Isidro",
+        "codProvi": "6",
+        "codCant": "4"
+    },
+    {
+        "id": 261,
+        "codigo": "3",
+        "descripcion": "Sierpe",
+        "codProvi": "6",
+        "codCant": "5"
+    },
+    {
+        "id": 262,
+        "codigo": "3",
+        "descripcion": "Naranjito",
+        "codProvi": "6",
+        "codCant": "6"
+    },
+    {
+        "id": 263,
+        "codigo": "3",
+        "descripcion": "Guaycará",
+        "codProvi": "6",
+        "codCant": "7"
+    },
+    {
+        "id": 264,
+        "codigo": "3",
+        "descripcion": "Agua Buena",
+        "codProvi": "6",
+        "codCant": "8"
+    },
+    {
+        "id": 265,
+        "codigo": "3",
+        "descripcion": "Río Blanco",
+        "codProvi": "7",
+        "codCant": "1"
+    },
+    {
+        "id": 266,
+        "codigo": "3",
+        "descripcion": "Rita",
+        "codProvi": "7",
+        "codCant": "2"
+    },
+    {
+        "id": 267,
+        "codigo": "3",
+        "descripcion": "Florida",
+        "codProvi": "7",
+        "codCant": "3"
+    },
+    {
+        "id": 268,
+        "codigo": "3",
+        "descripcion": "Cahuita",
+        "codProvi": "7",
+        "codCant": "4"
+    },
+    {
+        "id": 269,
+        "codigo": "3",
+        "descripcion": "Carrandí",
+        "codProvi": "7",
+        "codCant": "5"
+    },
+    {
+        "id": 270,
+        "codigo": "3",
+        "descripcion": "Pocora",
+        "codProvi": "7",
+        "codCant": "6"
+    },
+    {
+        "id": 271,
+        "codigo": "4",
+        "descripcion": "Catedral",
+        "codProvi": "1",
+        "codCant": "1"
+    },
+    {
+        "id": 272,
+        "codigo": "4",
+        "descripcion": "Concepción",
+        "codProvi": "1",
+        "codCant": "10"
+    },
+    {
+        "id": 273,
+        "codigo": "4",
+        "descripcion": "Patalillo",
+        "codProvi": "1",
+        "codCant": "11"
+    },
+    {
+        "id": 274,
+        "codigo": "4",
+        "descripcion": "Cangrejal",
+        "codProvi": "1",
+        "codCant": "12"
+    },
+    {
+        "id": 275,
+        "codigo": "4",
+        "descripcion": "León XIII",
+        "codProvi": "1",
+        "codCant": "13"
+    },
+    {
+        "id": 276,
+        "codigo": "4",
+        "descripcion": "San Rafael",
+        "codProvi": "1",
+        "codCant": "15"
+    },
+    {
+        "id": 277,
+        "codigo": "4",
+        "descripcion": "San Luis",
+        "codProvi": "1",
+        "codCant": "16"
+    },
+    {
+        "id": 278,
+        "codigo": "4",
+        "descripcion": "Tirrases",
+        "codProvi": "1",
+        "codCant": "18"
+    },
+    {
+        "id": 279,
+        "codigo": "4",
+        "descripcion": "Rivas",
+        "codProvi": "1",
+        "codCant": "19"
+    },
+    {
+        "id": 280,
+        "codigo": "4",
+        "descripcion": "San Isidro",
+        "codProvi": "1",
+        "codCant": "20"
+    },
+    {
+        "id": 281,
+        "codigo": "4",
+        "descripcion": "San Rafael Arriba",
+        "codProvi": "1",
+        "codCant": "3"
+    },
+    {
+        "id": 282,
+        "codigo": "4",
+        "descripcion": "Grifo Alto",
+        "codProvi": "1",
+        "codCant": "4"
+    },
+    {
+        "id": 283,
+        "codigo": "4",
+        "descripcion": "San Gabriel",
+        "codProvi": "1",
+        "codCant": "6"
+    },
+    {
+        "id": 284,
+        "codigo": "4",
+        "descripcion": "Piedras Negras",
+        "codProvi": "1",
+        "codCant": "7"
+    },
+    {
+        "id": 285,
+        "codigo": "4",
+        "descripcion": "Mata de Plátano",
+        "codProvi": "1",
+        "codCant": "8"
+    },
+    {
+        "id": 286,
+        "codigo": "4",
+        "descripcion": "Uruca",
+        "codProvi": "1",
+        "codCant": "9"
+    },
+    {
+        "id": 287,
+        "codigo": "4",
+        "descripcion": "San Antonio",
+        "codProvi": "2",
+        "codCant": "1"
+    },
+    {
+        "id": 288,
+        "codigo": "4",
+        "descripcion": "Aguas Zarcas",
+        "codProvi": "2",
+        "codCant": "10"
+    },
+    {
+        "id": 289,
+        "codigo": "4",
+        "descripcion": "Guadalupe",
+        "codProvi": "2",
+        "codCant": "11"
+    },
+    {
+        "id": 290,
+        "codigo": "4",
+        "descripcion": "San Pedro",
+        "codProvi": "2",
+        "codCant": "12"
+    },
+    {
+        "id": 291,
+        "codigo": "4",
+        "descripcion": "Bijagua",
+        "codProvi": "2",
+        "codCant": "13"
+    },
+    {
+        "id": 292,
+        "codigo": "4",
+        "descripcion": "San Jorge",
+        "codProvi": "2",
+        "codCant": "14"
+    },
+    {
+        "id": 293,
+        "codigo": "4",
+        "descripcion": "Katira",
+        "codProvi": "2",
+        "codCant": "15"
+    },
+    {
+        "id": 294,
+        "codigo": "4",
+        "descripcion": "Piedades Norte",
+        "codProvi": "2",
+        "codCant": "2"
+    },
+    {
+        "id": 295,
+        "codigo": "4",
+        "descripcion": "San Roque",
+        "codProvi": "2",
+        "codCant": "3"
+    },
+    {
+        "id": 296,
+        "codigo": "4",
+        "descripcion": "Labrador",
+        "codProvi": "2",
+        "codCant": "4"
+    },
+    {
+        "id": 297,
+        "codigo": "4",
+        "descripcion": "San Isidro",
+        "codProvi": "2",
+        "codCant": "5"
+    },
+    {
+        "id": 298,
+        "codigo": "4",
+        "descripcion": "Cirrí Sur",
+        "codProvi": "2",
+        "codCant": "6"
+    },
+    {
+        "id": 299,
+        "codigo": "4",
+        "descripcion": "Santiago",
+        "codProvi": "2",
+        "codCant": "7"
+    },
+    {
+        "id": 300,
+        "codigo": "4",
+        "descripcion": "Carrillos",
+        "codProvi": "2",
+        "codCant": "8"
+    },
+    {
+        "id": 301,
+        "codigo": "4",
+        "descripcion": "Coyolar",
+        "codProvi": "2",
+        "codCant": "9"
+    },
+    {
+        "id": 302,
+        "codigo": "4",
+        "descripcion": "San Nicolás",
+        "codProvi": "3",
+        "codCant": "1"
+    },
+    {
+        "id": 303,
+        "codigo": "4",
+        "descripcion": "Cachí",
+        "codProvi": "3",
+        "codCant": "2"
+    },
+    {
+        "id": 304,
+        "codigo": "4",
+        "descripcion": "San Rafael",
+        "codProvi": "3",
+        "codCant": "3"
+    },
+    {
+        "id": 305,
+        "codigo": "4",
+        "descripcion": "Santa Cruz",
+        "codProvi": "3",
+        "codCant": "5"
+    },
+    {
+        "id": 306,
+        "codigo": "4",
+        "descripcion": "Cipreses",
+        "codProvi": "3",
+        "codCant": "7"
+    },
+    {
+        "id": 307,
+        "codigo": "4",
+        "descripcion": "Patio de Agua",
+        "codProvi": "3",
+        "codCant": "8"
+    },
+    {
+        "id": 308,
+        "codigo": "4",
+        "descripcion": "Ulloa",
+        "codProvi": "4",
+        "codCant": "1"
+    },
+    {
+        "id": 309,
+        "codigo": "4",
+        "descripcion": "Llanuras del Gaspar",
+        "codProvi": "4",
+        "codCant": "10"
+    },
+    {
+        "id": 310,
+        "codigo": "4",
+        "descripcion": "San Roque",
+        "codProvi": "4",
+        "codCant": "2"
+    },
+    {
+        "id": 311,
+        "codigo": "4",
+        "descripcion": "Paracito",
+        "codProvi": "4",
+        "codCant": "3"
+    },
+    {
+        "id": 312,
+        "codigo": "4",
+        "descripcion": "Jesús",
+        "codProvi": "4",
+        "codCant": "4"
+    },
+    {
+        "id": 313,
+        "codigo": "4",
+        "descripcion": "Angeles",
+        "codProvi": "4",
+        "codCant": "5"
+    },
+    {
+        "id": 314,
+        "codigo": "4",
+        "descripcion": "San Francisco",
+        "codProvi": "4",
+        "codCant": "6"
+    },
+    {
+        "id": 315,
+        "codigo": "4",
+        "descripcion": "Nacascolo",
+        "codProvi": "5",
+        "codCant": "1"
+    },
+    {
+        "id": 316,
+        "codigo": "4",
+        "descripcion": "Santa Elena",
+        "codProvi": "5",
+        "codCant": "10"
+    },
+    {
+        "id": 317,
+        "codigo": "4",
+        "descripcion": "Huacas",
+        "codProvi": "5",
+        "codCant": "11"
+    },
+    {
+        "id": 318,
+        "codigo": "4",
+        "descripcion": "Quebrada Honda",
+        "codProvi": "5",
+        "codCant": "2"
+    },
+    {
+        "id": 319,
+        "codigo": "4",
+        "descripcion": "Tempate",
+        "codProvi": "5",
+        "codCant": "3"
+    },
+    {
+        "id": 320,
+        "codigo": "4",
+        "descripcion": "Río Naranjo",
+        "codProvi": "5",
+        "codCant": "4"
+    },
+    {
+        "id": 321,
+        "codigo": "4",
+        "descripcion": "Belén",
+        "codProvi": "5",
+        "codCant": "5"
+    },
+    {
+        "id": 322,
+        "codigo": "4",
+        "descripcion": "Bebedero",
+        "codProvi": "5",
+        "codCant": "6"
+    },
+    {
+        "id": 323,
+        "codigo": "4",
+        "descripcion": "Colorado",
+        "codProvi": "5",
+        "codCant": "7"
+    },
+    {
+        "id": 324,
+        "codigo": "4",
+        "descripcion": "Santa Rosa",
+        "codProvi": "5",
+        "codCant": "8"
+    },
+    {
+        "id": 325,
+        "codigo": "4",
+        "descripcion": "San Pablo",
+        "codProvi": "5",
+        "codCant": "9"
+    },
+    {
+        "id": 326,
+        "codigo": "4",
+        "descripcion": "Lepanto",
+        "codProvi": "6",
+        "codCant": "1"
+    },
+    {
+        "id": 327,
+        "codigo": "4",
+        "descripcion": "Laurel",
+        "codProvi": "6",
+        "codCant": "10"
+    },
+    {
+        "id": 328,
+        "codigo": "4",
+        "descripcion": "San Rafael",
+        "codProvi": "6",
+        "codCant": "2"
+    },
+    {
+        "id": 329,
+        "codigo": "4",
+        "descripcion": "Boruca",
+        "codProvi": "6",
+        "codCant": "3"
+    },
+    {
+        "id": 330,
+        "codigo": "4",
+        "descripcion": "Bahía Ballena",
+        "codProvi": "6",
+        "codCant": "5"
+    },
+    {
+        "id": 331,
+        "codigo": "4",
+        "descripcion": "Pavón",
+        "codProvi": "6",
+        "codCant": "7"
+    },
+    {
+        "id": 332,
+        "codigo": "4",
+        "descripcion": "Limoncito",
+        "codProvi": "6",
+        "codCant": "8"
+    },
+    {
+        "id": 333,
+        "codigo": "4",
+        "descripcion": "Matama",
+        "codProvi": "7",
+        "codCant": "1"
+    },
+    {
+        "id": 334,
+        "codigo": "4",
+        "descripcion": "Roxana",
+        "codProvi": "7",
+        "codCant": "2"
+    },
+    {
+        "id": 335,
+        "codigo": "4",
+        "descripcion": "Germania",
+        "codProvi": "7",
+        "codCant": "3"
+    },
+    {
+        "id": 336,
+        "codigo": "4",
+        "descripcion": "Telire",
+        "codProvi": "7",
+        "codCant": "4"
+    },
+    {
+        "id": 337,
+        "codigo": "4",
+        "descripcion": "Río Jiménez",
+        "codProvi": "7",
+        "codCant": "6"
+    },
+    {
+        "id": 338,
+        "codigo": "5",
+        "descripcion": "Zapote",
+        "codProvi": "1",
+        "codCant": "1"
+    },
+    {
+        "id": 339,
+        "codigo": "5",
+        "descripcion": "San Felipe",
+        "codProvi": "1",
+        "codCant": "10"
+    },
+    {
+        "id": 340,
+        "codigo": "5",
+        "descripcion": "Cascajal",
+        "codProvi": "1",
+        "codCant": "11"
+    },
+    {
+        "id": 341,
+        "codigo": "5",
+        "descripcion": "Sabanillas",
+        "codProvi": "1",
+        "codCant": "12"
+    },
+    {
+        "id": 342,
+        "codigo": "5",
+        "descripcion": "Colima",
+        "codProvi": "1",
+        "codCant": "13"
+    },
+    {
+        "id": 343,
+        "codigo": "5",
+        "descripcion": "Carara",
+        "codProvi": "1",
+        "codCant": "16"
+    },
+    {
+        "id": 344,
+        "codigo": "5",
+        "descripcion": "San Pedro",
+        "codProvi": "1",
+        "codCant": "19"
+    },
+    {
+        "id": 345,
+        "codigo": "5",
+        "descripcion": "Santa Cruz",
+        "codProvi": "1",
+        "codCant": "20"
+    },
+    {
+        "id": 346,
+        "codigo": "5",
+        "descripcion": "San Antonio",
+        "codProvi": "1",
+        "codCant": "3"
+    },
+    {
+        "id": 347,
+        "codigo": "5",
+        "descripcion": "San Rafael",
+        "codProvi": "1",
+        "codCant": "4"
+    },
+    {
+        "id": 348,
+        "codigo": "5",
+        "descripcion": "Legua",
+        "codProvi": "1",
+        "codCant": "6"
+    },
+    {
+        "id": 349,
+        "codigo": "5",
+        "descripcion": "Picagres",
+        "codProvi": "1",
+        "codCant": "7"
+    },
+    {
+        "id": 350,
+        "codigo": "5",
+        "descripcion": "Ipís",
+        "codProvi": "1",
+        "codCant": "8"
+    },
+    {
+        "id": 351,
+        "codigo": "5",
+        "descripcion": "Piedades",
+        "codProvi": "1",
+        "codCant": "9"
+    },
+    {
+        "id": 352,
+        "codigo": "5",
+        "descripcion": "Guácima",
+        "codProvi": "2",
+        "codCant": "1"
+    },
+    {
+        "id": 353,
+        "codigo": "5",
+        "descripcion": "Venecia",
+        "codProvi": "2",
+        "codCant": "10"
+    },
+    {
+        "id": 354,
+        "codigo": "5",
+        "descripcion": "Palmira",
+        "codProvi": "2",
+        "codCant": "11"
+    },
+    {
+        "id": 355,
+        "codigo": "5",
+        "descripcion": "Rodríguez",
+        "codProvi": "2",
+        "codCant": "12"
+    },
+    {
+        "id": 356,
+        "codigo": "5",
+        "descripcion": "Delicias",
+        "codProvi": "2",
+        "codCant": "13"
+    },
+    {
+        "id": 357,
+        "codigo": "5",
+        "descripcion": "Piedades Sur",
+        "codProvi": "2",
+        "codCant": "2"
+    },
+    {
+        "id": 358,
+        "codigo": "5",
+        "descripcion": "Tacares",
+        "codProvi": "2",
+        "codCant": "3"
+    },
+    {
+        "id": 359,
+        "codigo": "5",
+        "descripcion": "Concepción",
+        "codProvi": "2",
+        "codCant": "5"
+    },
+    {
+        "id": 360,
+        "codigo": "5",
+        "descripcion": "San Jerónimo",
+        "codProvi": "2",
+        "codCant": "6"
+    },
+    {
+        "id": 361,
+        "codigo": "5",
+        "descripcion": "Candelaria",
+        "codProvi": "2",
+        "codCant": "7"
+    },
+    {
+        "id": 362,
+        "codigo": "5",
+        "descripcion": "Sabana Redonda",
+        "codProvi": "2",
+        "codCant": "8"
+    },
+    {
+        "id": 363,
+        "codigo": "5",
+        "descripcion": "Ceiba",
+        "codProvi": "2",
+        "codCant": "9"
+    },
+    {
+        "id": 364,
+        "codigo": "5",
+        "descripcion": "Aguacaliente  o  San Fco.",
+        "codProvi": "3",
+        "codCant": "1"
+    },
+    {
+        "id": 365,
+        "codigo": "5",
+        "descripcion": "Llanos de Santa Lucia",
+        "codProvi": "3",
+        "codCant": "2"
+    },
+    {
+        "id": 366,
+        "codigo": "5",
+        "descripcion": "Concepción",
+        "codProvi": "3",
+        "codCant": "3"
+    },
+    {
+        "id": 367,
+        "codigo": "5",
+        "descripcion": "Santa Teresita",
+        "codProvi": "3",
+        "codCant": "5"
+    },
+    {
+        "id": 368,
+        "codigo": "5",
+        "descripcion": "Santa Rosa",
+        "codProvi": "3",
+        "codCant": "7"
+    },
+    {
+        "id": 369,
+        "codigo": "5",
+        "descripcion": "Vara Blanca",
+        "codProvi": "4",
+        "codCant": "1"
+    },
+    {
+        "id": 370,
+        "codigo": "5",
+        "descripcion": "Cureña",
+        "codProvi": "4",
+        "codCant": "10"
+    },
+    {
+        "id": 371,
+        "codigo": "5",
+        "descripcion": "Santa Lucía",
+        "codProvi": "4",
+        "codCant": "2"
+    },
+    {
+        "id": 372,
+        "codigo": "5",
+        "descripcion": "Santo Tomás",
+        "codProvi": "4",
+        "codCant": "3"
+    },
+    {
+        "id": 373,
+        "codigo": "5",
+        "descripcion": "Santo Domingo",
+        "codProvi": "4",
+        "codCant": "4"
+    },
+    {
+        "id": 374,
+        "codigo": "5",
+        "descripcion": "Concepción",
+        "codProvi": "4",
+        "codCant": "5"
+    },
+    {
+        "id": 375,
+        "codigo": "5",
+        "descripcion": "Curubandé",
+        "codProvi": "5",
+        "codCant": "1"
+    },
+    {
+        "id": 376,
+        "codigo": "5",
+        "descripcion": "Sámara",
+        "codProvi": "5",
+        "codCant": "2"
+    },
+    {
+        "id": 377,
+        "codigo": "5",
+        "descripcion": "Cartagena",
+        "codProvi": "5",
+        "codCant": "3"
+    },
+    {
+        "id": 378,
+        "codigo": "5",
+        "descripcion": "Porozal",
+        "codProvi": "5",
+        "codCant": "6"
+    },
+    {
+        "id": 379,
+        "codigo": "5",
+        "descripcion": "Líbano",
+        "codProvi": "5",
+        "codCant": "8"
+    },
+    {
+        "id": 380,
+        "codigo": "5",
+        "descripcion": "Porvenir",
+        "codProvi": "5",
+        "codCant": "9"
+    },
+    {
+        "id": 381,
+        "codigo": "5",
+        "descripcion": "Paquera",
+        "codProvi": "6",
+        "codCant": "1"
+    },
+    {
+        "id": 382,
+        "codigo": "5",
+        "descripcion": "San Jerónimo",
+        "codProvi": "6",
+        "codCant": "2"
+    },
+    {
+        "id": 383,
+        "codigo": "5",
+        "descripcion": "Pilas",
+        "codProvi": "6",
+        "codCant": "3"
+    },
+    {
+        "id": 384,
+        "codigo": "5",
+        "descripcion": "Piedras Blancas",
+        "codProvi": "6",
+        "codCant": "5"
+    },
+    {
+        "id": 385,
+        "codigo": "5",
+        "descripcion": "Pittier",
+        "codProvi": "6",
+        "codCant": "8"
+    },
+    {
+        "id": 386,
+        "codigo": "5",
+        "descripcion": "Cariari",
+        "codProvi": "7",
+        "codCant": "2"
+    },
+    {
+        "id": 387,
+        "codigo": "5",
+        "descripcion": "Cairo",
+        "codProvi": "7",
+        "codCant": "3"
+    },
+    {
+        "id": 388,
+        "codigo": "5",
+        "descripcion": "Duacarí",
+        "codProvi": "7",
+        "codCant": "6"
+    },
+    {
+        "id": 389,
+        "codigo": "6",
+        "descripcion": "San Fco.de Dos Ríos",
+        "codProvi": "1",
+        "codCant": "1"
+    },
+    {
+        "id": 390,
+        "codigo": "6",
+        "descripcion": "Platanares",
+        "codProvi": "1",
+        "codCant": "19"
+    },
+    {
+        "id": 391,
+        "codigo": "6",
+        "descripcion": "San Antonio",
+        "codProvi": "1",
+        "codCant": "20"
+    },
+    {
+        "id": 392,
+        "codigo": "6",
+        "descripcion": "Frailes",
+        "codProvi": "1",
+        "codCant": "3"
+    },
+    {
+        "id": 393,
+        "codigo": "6",
+        "descripcion": "Candelarita",
+        "codProvi": "1",
+        "codCant": "4"
+    },
+    {
+        "id": 394,
+        "codigo": "6",
+        "descripcion": "Monterrey",
+        "codProvi": "1",
+        "codCant": "6"
+    },
+    {
+        "id": 395,
+        "codigo": "6",
+        "descripcion": "Jaris",
+        "codProvi": "1",
+        "codCant": "7"
+    },
+    {
+        "id": 396,
+        "codigo": "6",
+        "descripcion": "Rancho Redondo",
+        "codProvi": "1",
+        "codCant": "8"
+    },
+    {
+        "id": 397,
+        "codigo": "6",
+        "descripcion": "Brasil",
+        "codProvi": "1",
+        "codCant": "9"
+    },
+    {
+        "id": 398,
+        "codigo": "6",
+        "descripcion": "San Isidro",
+        "codProvi": "2",
+        "codCant": "1"
+    },
+    {
+        "id": 399,
+        "codigo": "6",
+        "descripcion": "Pital",
+        "codProvi": "2",
+        "codCant": "10"
+    },
+    {
+        "id": 400,
+        "codigo": "6",
+        "descripcion": "Zapote",
+        "codProvi": "2",
+        "codCant": "11"
+    },
+    {
+        "id": 401,
+        "codigo": "6",
+        "descripcion": "Dos Ríos",
+        "codProvi": "2",
+        "codCant": "13"
+    },
+    {
+        "id": 402,
+        "codigo": "6",
+        "descripcion": "San Rafael",
+        "codProvi": "2",
+        "codCant": "2"
+    },
+    {
+        "id": 403,
+        "codigo": "6",
+        "descripcion": "Río Cuarto",
+        "codProvi": "2",
+        "codCant": "3"
+    },
+    {
+        "id": 404,
+        "codigo": "6",
+        "descripcion": "San José",
+        "codProvi": "2",
+        "codCant": "5"
+    },
+    {
+        "id": 405,
+        "codigo": "6",
+        "descripcion": "San Juan",
+        "codProvi": "2",
+        "codCant": "6"
+    },
+    {
+        "id": 406,
+        "codigo": "6",
+        "descripcion": "Esquipulas",
+        "codProvi": "2",
+        "codCant": "7"
+    },
+    {
+        "id": 407,
+        "codigo": "6",
+        "descripcion": "Guadalupe o Arenilla",
+        "codProvi": "3",
+        "codCant": "1"
+    },
+    {
+        "id": 408,
+        "codigo": "6",
+        "descripcion": "Dulce Nombre",
+        "codProvi": "3",
+        "codCant": "3"
+    },
+    {
+        "id": 409,
+        "codigo": "6",
+        "descripcion": "Pavones",
+        "codProvi": "3",
+        "codCant": "5"
+    },
+    {
+        "id": 410,
+        "codigo": "6",
+        "descripcion": "San José de La Montaña",
+        "codProvi": "4",
+        "codCant": "2"
+    },
+    {
+        "id": 411,
+        "codigo": "6",
+        "descripcion": "Santa Rosa",
+        "codProvi": "4",
+        "codCant": "3"
+    },
+    {
+        "id": 412,
+        "codigo": "6",
+        "descripcion": "Purabá",
+        "codProvi": "4",
+        "codCant": "4"
+    },
+    {
+        "id": 413,
+        "codigo": "6",
+        "descripcion": "Nosara",
+        "codProvi": "5",
+        "codCant": "2"
+    },
+    {
+        "id": 414,
+        "codigo": "6",
+        "descripcion": "Cuajiniquil",
+        "codProvi": "5",
+        "codCant": "3"
+    },
+    {
+        "id": 415,
+        "codigo": "6",
+        "descripcion": "Tierras Morenas",
+        "codProvi": "5",
+        "codCant": "8"
+    },
+    {
+        "id": 416,
+        "codigo": "6",
+        "descripcion": "Bejuco",
+        "codProvi": "5",
+        "codCant": "9"
+    },
+    {
+        "id": 417,
+        "codigo": "6",
+        "descripcion": "Manzanillo",
+        "codProvi": "6",
+        "codCant": "1"
+    },
+    {
+        "id": 418,
+        "codigo": "6",
+        "descripcion": "Caldera",
+        "codProvi": "6",
+        "codCant": "2"
+    },
+    {
+        "id": 419,
+        "codigo": "6",
+        "descripcion": "Colinas",
+        "codProvi": "6",
+        "codCant": "3"
+    },
+    {
+        "id": 420,
+        "codigo": "6",
+        "descripcion": "Bahía Drake",
+        "codProvi": "6",
+        "codCant": "5"
+    },
+    {
+        "id": 421,
+        "codigo": "6",
+        "descripcion": "Gutierrez Braun",
+        "codProvi": "6",
+        "codCant": "8"
+    },
+    {
+        "id": 422,
+        "codigo": "6",
+        "descripcion": "Colorado",
+        "codProvi": "7",
+        "codCant": "2"
+    },
+    {
+        "id": 423,
+        "codigo": "6",
+        "descripcion": "Alegría",
+        "codProvi": "7",
+        "codCant": "3"
+    },
+    {
+        "id": 424,
+        "codigo": "7",
+        "descripcion": "Uruca",
+        "codProvi": "1",
+        "codCant": "1"
+    },
+    {
+        "id": 425,
+        "codigo": "7",
+        "descripcion": "Pejibaye",
+        "codProvi": "1",
+        "codCant": "19"
+    },
+    {
+        "id": 426,
+        "codigo": "7",
+        "descripcion": "Patarrá",
+        "codProvi": "1",
+        "codCant": "3"
+    },
+    {
+        "id": 427,
+        "codigo": "7",
+        "descripcion": "Desamparaditos",
+        "codProvi": "1",
+        "codCant": "4"
+    },
+    {
+        "id": 428,
+        "codigo": "7",
+        "descripcion": "Salitrillos",
+        "codProvi": "1",
+        "codCant": "6"
+    },
+    {
+        "id": 429,
+        "codigo": "7",
+        "descripcion": "Quitirrisi",
+        "codProvi": "1",
+        "codCant": "7"
+    },
+    {
+        "id": 430,
+        "codigo": "7",
+        "descripcion": "Purral",
+        "codProvi": "1",
+        "codCant": "8"
+    },
+    {
+        "id": 431,
+        "codigo": "7",
+        "descripcion": "Sabanilla",
+        "codProvi": "2",
+        "codCant": "1"
+    },
+    {
+        "id": 432,
+        "codigo": "7",
+        "descripcion": "Fortuna",
+        "codProvi": "2",
+        "codCant": "10"
+    },
+    {
+        "id": 433,
+        "codigo": "7",
+        "descripcion": "Brisas",
+        "codProvi": "2",
+        "codCant": "11"
+    },
+    {
+        "id": 434,
+        "codigo": "7",
+        "descripcion": "Yolillal",
+        "codProvi": "2",
+        "codCant": "13"
+    },
+    {
+        "id": 435,
+        "codigo": "7",
+        "descripcion": "San Isidro",
+        "codProvi": "2",
+        "codCant": "2"
+    },
+    {
+        "id": 436,
+        "codigo": "7",
+        "descripcion": "Puente de Piedra",
+        "codProvi": "2",
+        "codCant": "3"
+    },
+    {
+        "id": 437,
+        "codigo": "7",
+        "descripcion": "Santa Eulalia",
+        "codProvi": "2",
+        "codCant": "5"
+    },
+    {
+        "id": 438,
+        "codigo": "7",
+        "descripcion": "Rosario",
+        "codProvi": "2",
+        "codCant": "6"
+    },
+    {
+        "id": 439,
+        "codigo": "7",
+        "descripcion": "Granja",
+        "codProvi": "2",
+        "codCant": "7"
+    },
+    {
+        "id": 440,
+        "codigo": "7",
+        "descripcion": "Corralillo",
+        "codProvi": "3",
+        "codCant": "1"
+    },
+    {
+        "id": 441,
+        "codigo": "7",
+        "descripcion": "San Ramón",
+        "codProvi": "3",
+        "codCant": "3"
+    },
+    {
+        "id": 442,
+        "codigo": "7",
+        "descripcion": "Tuis",
+        "codProvi": "3",
+        "codCant": "5"
+    },
+    {
+        "id": 443,
+        "codigo": "7",
+        "descripcion": "Tures",
+        "codProvi": "4",
+        "codCant": "3"
+    },
+    {
+        "id": 444,
+        "codigo": "7",
+        "descripcion": "Belén de Nosarita",
+        "codProvi": "5",
+        "codCant": "2"
+    },
+    {
+        "id": 445,
+        "codigo": "7",
+        "descripcion": "Diriá",
+        "codProvi": "5",
+        "codCant": "3"
+    },
+    {
+        "id": 446,
+        "codigo": "7",
+        "descripcion": "Arenal",
+        "codProvi": "5",
+        "codCant": "8"
+    },
+    {
+        "id": 447,
+        "codigo": "7",
+        "descripcion": "Guacimal",
+        "codProvi": "6",
+        "codCant": "1"
+    },
+    {
+        "id": 448,
+        "codigo": "7",
+        "descripcion": "Chánguena",
+        "codProvi": "6",
+        "codCant": "3"
+    },
+    {
+        "id": 449,
+        "codigo": "7",
+        "descripcion": "La Colonia",
+        "codProvi": "7",
+        "codCant": "2"
+    },
+    {
+        "id": 450,
+        "codigo": "8",
+        "descripcion": "Mata Redonda",
+        "codProvi": "1",
+        "codCant": "1"
+    },
+    {
+        "id": 451,
+        "codigo": "8",
+        "descripcion": "Cajón",
+        "codProvi": "1",
+        "codCant": "19"
+    },
+    {
+        "id": 452,
+        "codigo": "8",
+        "descripcion": "San Cristóbal",
+        "codProvi": "1",
+        "codCant": "3"
+    },
+    {
+        "id": 453,
+        "codigo": "8",
+        "descripcion": "San Antonio",
+        "codProvi": "1",
+        "codCant": "4"
+    },
+    {
+        "id": 454,
+        "codigo": "8",
+        "descripcion": "San Rafael",
+        "codProvi": "2",
+        "codCant": "1"
+    },
+    {
+        "id": 455,
+        "codigo": "8",
+        "descripcion": "Tigra",
+        "codProvi": "2",
+        "codCant": "10"
+    },
+    {
+        "id": 456,
+        "codigo": "8",
+        "descripcion": "Canalete",
+        "codProvi": "2",
+        "codCant": "13"
+    },
+    {
+        "id": 457,
+        "codigo": "8",
+        "descripcion": "Angeles",
+        "codProvi": "2",
+        "codCant": "2"
+    },
+    {
+        "id": 458,
+        "codigo": "8",
+        "descripcion": "Bolívar",
+        "codProvi": "2",
+        "codCant": "3"
+    },
+    {
+        "id": 459,
+        "codigo": "8",
+        "descripcion": "Escobal",
+        "codProvi": "2",
+        "codCant": "5"
+    },
+    {
+        "id": 460,
+        "codigo": "8",
+        "descripcion": "Palmitos",
+        "codProvi": "2",
+        "codCant": "6"
+    },
+    {
+        "id": 461,
+        "codigo": "8",
+        "descripcion": "Tierra Blanca",
+        "codProvi": "3",
+        "codCant": "1"
+    },
+    {
+        "id": 462,
+        "codigo": "8",
+        "descripcion": "Río Azul",
+        "codProvi": "3",
+        "codCant": "3"
+    },
+    {
+        "id": 463,
+        "codigo": "8",
+        "descripcion": "Tayutic",
+        "codProvi": "3",
+        "codCant": "5"
+    },
+    {
+        "id": 464,
+        "codigo": "8",
+        "descripcion": "Pará",
+        "codProvi": "4",
+        "codCant": "3"
+    },
+    {
+        "id": 465,
+        "codigo": "8",
+        "descripcion": "Cabo Velas",
+        "codProvi": "5",
+        "codCant": "3"
+    },
+    {
+        "id": 466,
+        "codigo": "8",
+        "descripcion": "Barranca",
+        "codProvi": "6",
+        "codCant": "1"
+    },
+    {
+        "id": 467,
+        "codigo": "8",
+        "descripcion": "Biolley",
+        "codProvi": "6",
+        "codCant": "3"
+    },
+    {
+        "id": 468,
+        "codigo": "9",
+        "descripcion": "Pavas",
+        "codProvi": "1",
+        "codCant": "1"
+    },
+    {
+        "id": 469,
+        "codigo": "9",
+        "descripcion": "Barú",
+        "codProvi": "1",
+        "codCant": "19"
+    },
+    {
+        "id": 470,
+        "codigo": "9",
+        "descripcion": "Rosario",
+        "codProvi": "1",
+        "codCant": "3"
+    },
+    {
+        "id": 471,
+        "codigo": "9",
+        "descripcion": "Chires",
+        "codProvi": "1",
+        "codCant": "4"
+    },
+    {
+        "id": 472,
+        "codigo": "9",
+        "descripcion": "Río Segundo",
+        "codProvi": "2",
+        "codCant": "1"
+    },
+    {
+        "id": 473,
+        "codigo": "9",
+        "descripcion": "Palmera",
+        "codProvi": "2",
+        "codCant": "10"
+    },
+    {
+        "id": 474,
+        "codigo": "9",
+        "descripcion": "Alfaro",
+        "codProvi": "2",
+        "codCant": "2"
+    },
+    {
+        "id": 475,
+        "codigo": "9",
+        "descripcion": "Dulce Nombre",
+        "codProvi": "3",
+        "codCant": "1"
+    },
+    {
+        "id": 476,
+        "codigo": "9",
+        "descripcion": "Santa Rosa",
+        "codProvi": "3",
+        "codCant": "5"
+    },
+    {
+        "id": 477,
+        "codigo": "9",
+        "descripcion": "Tamarindo",
+        "codProvi": "5",
+        "codCant": "3"
+    },
+    {
+        "id": 478,
+        "codigo": "9",
+        "descripcion": "Monteverde",
+        "codProvi": "6",
+        "codCant": "1"
+    },
+    {
+        "id": 479,
+        "codigo": "9",
+        "descripcion": "Brunka",
+        "codProvi": "6",
+        "codCant": "3"
+    }
+]

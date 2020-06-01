@@ -1,0 +1,30 @@
+[
+    {
+        "codigo": "1",
+        "descripcion": "SAN JOSE"
+    },
+    {
+        "codigo": "2",
+        "descripcion": "ALAJUELA"
+    },
+    {
+        "codigo": "3",
+        "descripcion": "CARTAGO"
+    },
+    {
+        "codigo": "4",
+        "descripcion": "HEREDIA"
+    },
+    {
+        "codigo": "5",
+        "descripcion": "GUANACASTE"
+    },
+    {
+        "codigo": "6",
+        "descripcion": "PUNTARENAS"
+    },
+    {
+        "codigo": "7",
+        "descripcion": "LIMON"
+    }
+]
