@@ -1,0 +1,19 @@
+import 'dart:async' show Future;
+import 'dart:convert';
+
+import 'package:flutter/services.dart' show rootBundle;
+
+class LocationsService {
+
+  Future<String> loadProvincias() async {
+    return await rootBundle.loadString('resources/Provincias.json');
+  }
+
+  Future<String> loadCantones() async {
+    return await rootBundle.loadString('resources/Cantones.json');
+  }
+
+  Future<String> loadDistritos() async {
+    return await rootBundle.loadString('resources/Distritos.json');
+  }
+}

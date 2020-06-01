@@ -1,0 +1,488 @@
+[
+    {
+        "id": 1,
+        "codigo": "1",
+        "descripcion": "SAN JOSE",
+        "codProvi": "1"
+    },
+    {
+        "id": 2,
+        "codigo": "1",
+        "descripcion": "ALAJUELA",
+        "codProvi": "2"
+    },
+    {
+        "id": 3,
+        "codigo": "1",
+        "descripcion": "CARTAGO",
+        "codProvi": "3"
+    },
+    {
+        "id": 4,
+        "codigo": "1",
+        "descripcion": "HEREDIA",
+        "codProvi": "4"
+    },
+    {
+        "id": 5,
+        "codigo": "1",
+        "descripcion": "LIBERIA",
+        "codProvi": "5"
+    },
+    {
+        "id": 6,
+        "codigo": "1",
+        "descripcion": "PUNTARENAS",
+        "codProvi": "6"
+    },
+    {
+        "id": 7,
+        "codigo": "1",
+        "descripcion": "LIMON",
+        "codProvi": "7"
+    },
+    {
+        "id": 8,
+        "codigo": "10",
+        "descripcion": "ALAJUELITA",
+        "codProvi": "1"
+    },
+    {
+        "id": 9,
+        "codigo": "10",
+        "descripcion": "SAN CARLOS",
+        "codProvi": "2"
+    },
+    {
+        "id": 10,
+        "codigo": "10",
+        "descripcion": "SARAPIQUI",
+        "codProvi": "4"
+    },
+    {
+        "id": 11,
+        "codigo": "10",
+        "descripcion": "LA CRUZ",
+        "codProvi": "5"
+    },
+    {
+        "id": 12,
+        "codigo": "10",
+        "descripcion": "CORREDORES",
+        "codProvi": "6"
+    },
+    {
+        "id": 13,
+        "codigo": "11",
+        "descripcion": "VASQUEZ DE CORONADO",
+        "codProvi": "1"
+    },
+    {
+        "id": 14,
+        "codigo": "11",
+        "descripcion": "ZARCERO",
+        "codProvi": "2"
+    },
+    {
+        "id": 15,
+        "codigo": "11",
+        "descripcion": "HOJANCHA",
+        "codProvi": "5"
+    },
+    {
+        "id": 16,
+        "codigo": "11",
+        "descripcion": "GARABITO",
+        "codProvi": "6"
+    },
+    {
+        "id": 17,
+        "codigo": "12",
+        "descripcion": "ACOSTA",
+        "codProvi": "1"
+    },
+    {
+        "id": 18,
+        "codigo": "12",
+        "descripcion": "VALVERDE VEGA",
+        "codProvi": "2"
+    },
+    {
+        "id": 19,
+        "codigo": "13",
+        "descripcion": "TIBAS",
+        "codProvi": "1"
+    },
+    {
+        "id": 20,
+        "codigo": "13",
+        "descripcion": "UPALA",
+        "codProvi": "2"
+    },
+    {
+        "id": 21,
+        "codigo": "14",
+        "descripcion": "MORAVIA",
+        "codProvi": "1"
+    },
+    {
+        "id": 22,
+        "codigo": "14",
+        "descripcion": "LOS CHILES",
+        "codProvi": "2"
+    },
+    {
+        "id": 23,
+        "codigo": "15",
+        "descripcion": "MONTES DE OCA",
+        "codProvi": "1"
+    },
+    {
+        "id": 24,
+        "codigo": "15",
+        "descripcion": "GUATUSO",
+        "codProvi": "2"
+    },
+    {
+        "id": 25,
+        "codigo": "16",
+        "descripcion": "TURRUBARES",
+        "codProvi": "1"
+    },
+    {
+        "id": 26,
+        "codigo": "17",
+        "descripcion": "DOTA",
+        "codProvi": "1"
+    },
+    {
+        "id": 27,
+        "codigo": "18",
+        "descripcion": "CURRIDABAT",
+        "codProvi": "1"
+    },
+    {
+        "id": 28,
+        "codigo": "19",
+        "descripcion": "PEREZ ZELEDON",
+        "codProvi": "1"
+    },
+    {
+        "id": 29,
+        "codigo": "2",
+        "descripcion": "ESCAZU",
+        "codProvi": "1"
+    },
+    {
+        "id": 30,
+        "codigo": "2",
+        "descripcion": "SAN RAMON",
+        "codProvi": "2"
+    },
+    {
+        "id": 31,
+        "codigo": "2",
+        "descripcion": "PARAISO",
+        "codProvi": "3"
+    },
+    {
+        "id": 32,
+        "codigo": "2",
+        "descripcion": "BARVA",
+        "codProvi": "4"
+    },
+    {
+        "id": 33,
+        "codigo": "2",
+        "descripcion": "NICOYA",
+        "codProvi": "5"
+    },
+    {
+        "id": 34,
+        "codigo": "2",
+        "descripcion": "ESPARZA",
+        "codProvi": "6"
+    },
+    {
+        "id": 35,
+        "codigo": "2",
+        "descripcion": "POCOCI",
+        "codProvi": "7"
+    },
+    {
+        "id": 36,
+        "codigo": "20",
+        "descripcion": "LEON CORTES",
+        "codProvi": "1"
+    },
+    {
+        "id": 37,
+        "codigo": "3",
+        "descripcion": "DESAMPARADOS",
+        "codProvi": "1"
+    },
+    {
+        "id": 38,
+        "codigo": "3",
+        "descripcion": "GRECIA",
+        "codProvi": "2"
+    },
+    {
+        "id": 39,
+        "codigo": "3",
+        "descripcion": "LA UNION",
+        "codProvi": "3"
+    },
+    {
+        "id": 40,
+        "codigo": "3",
+        "descripcion": "SANTO DOMINGO",
+        "codProvi": "4"
+    },
+    {
+        "id": 41,
+        "codigo": "3",
+        "descripcion": "SANTA CRUZ",
+        "codProvi": "5"
+    },
+    {
+        "id": 42,
+        "codigo": "3",
+        "descripcion": "BUENOS AIRES",
+        "codProvi": "6"
+    },
+    {
+        "id": 43,
+        "codigo": "3",
+        "descripcion": "SIQUIRRES",
+        "codProvi": "7"
+    },
+    {
+        "id": 44,
+        "codigo": "4",
+        "descripcion": "PURISCAL",
+        "codProvi": "1"
+    },
+    {
+        "id": 45,
+        "codigo": "4",
+        "descripcion": "SAN MATEO",
+        "codProvi": "2"
+    },
+    {
+        "id": 46,
+        "codigo": "4",
+        "descripcion": "JIMENEZ",
+        "codProvi": "3"
+    },
+    {
+        "id": 47,
+        "codigo": "4",
+        "descripcion": "SANTA BARBARA",
+        "codProvi": "4"
+    },
+    {
+        "id": 48,
+        "codigo": "4",
+        "descripcion": "BAGACES",
+        "codProvi": "5"
+    },
+    {
+        "id": 49,
+        "codigo": "4",
+        "descripcion": "MONTES DE ORO",
+        "codProvi": "6"
+    },
+    {
+        "id": 50,
+        "codigo": "4",
+        "descripcion": "TALAMANCA",
+        "codProvi": "7"
+    },
+    {
+        "id": 51,
+        "codigo": "5",
+        "descripcion": "TARRAZU",
+        "codProvi": "1"
+    },
+    {
+        "id": 52,
+        "codigo": "5",
+        "descripcion": "ATENAS",
+        "codProvi": "2"
+    },
+    {
+        "id": 53,
+        "codigo": "5",
+        "descripcion": "TURRIALBA",
+        "codProvi": "3"
+    },
+    {
+        "id": 54,
+        "codigo": "5",
+        "descripcion": "SAN RAFAEL",
+        "codProvi": "4"
+    },
+    {
+        "id": 55,
+        "codigo": "5",
+        "descripcion": "CARRILLO",
+        "codProvi": "5"
+    },
+    {
+        "id": 56,
+        "codigo": "5",
+        "descripcion": "OSA",
+        "codProvi": "6"
+    },
+    {
+        "id": 57,
+        "codigo": "5",
+        "descripcion": "MATINA",
+        "codProvi": "7"
+    },
+    {
+        "id": 58,
+        "codigo": "6",
+        "descripcion": "ASERRI",
+        "codProvi": "1"
+    },
+    {
+        "id": 59,
+        "codigo": "6",
+        "descripcion": "NARANJO",
+        "codProvi": "2"
+    },
+    {
+        "id": 60,
+        "codigo": "6",
+        "descripcion": "ALVARADO",
+        "codProvi": "3"
+    },
+    {
+        "id": 61,
+        "codigo": "6",
+        "descripcion": "SAN ISIDRO",
+        "codProvi": "4"
+    },
+    {
+        "id": 62,
+        "codigo": "6",
+        "descripcion": "CAÑAS",
+        "codProvi": "5"
+    },
+    {
+        "id": 63,
+        "codigo": "6",
+        "descripcion": "AGUIRRE",
+        "codProvi": "6"
+    },
+    {
+        "id": 64,
+        "codigo": "6",
+        "descripcion": "GUACIMO",
+        "codProvi": "7"
+    },
+    {
+        "id": 65,
+        "codigo": "7",
+        "descripcion": "MORA",
+        "codProvi": "1"
+    },
+    {
+        "id": 66,
+        "codigo": "7",
+        "descripcion": "PALMARES",
+        "codProvi": "2"
+    },
+    {
+        "id": 67,
+        "codigo": "7",
+        "descripcion": "OREAMUNO",
+        "codProvi": "3"
+    },
+    {
+        "id": 68,
+        "codigo": "7",
+        "descripcion": "BELEN",
+        "codProvi": "4"
+    },
+    {
+        "id": 69,
+        "codigo": "7",
+        "descripcion": "ABANGARES",
+        "codProvi": "5"
+    },
+    {
+        "id": 70,
+        "codigo": "7",
+        "descripcion": "GOLFITO",
+        "codProvi": "6"
+    },
+    {
+        "id": 71,
+        "codigo": "8",
+        "descripcion": "GOICOECHEA",
+        "codProvi": "1"
+    },
+    {
+        "id": 72,
+        "codigo": "8",
+        "descripcion": "POAS",
+        "codProvi": "2"
+    },
+    {
+        "id": 73,
+        "codigo": "8",
+        "descripcion": "EL GUARCO",
+        "codProvi": "3"
+    },
+    {
+        "id": 74,
+        "codigo": "8",
+        "descripcion": "FLORES",
+        "codProvi": "4"
+    },
+    {
+        "id": 75,
+        "codigo": "8",
+        "descripcion": "TILARAN",
+        "codProvi": "5"
+    },
+    {
+        "id": 76,
+        "codigo": "8",
+        "descripcion": "COTO BRUS",
+        "codProvi": "6"
+    },
+    {
+        "id": 77,
+        "codigo": "9",
+        "descripcion": "SANTA ANA",
+        "codProvi": "1"
+    },
+    {
+        "id": 78,
+        "codigo": "9",
+        "descripcion": "OROTINA",
+        "codProvi": "2"
+    },
+    {
+        "id": 79,
+        "codigo": "9",
+        "descripcion": "SAN PABLO",
+        "codProvi": "4"
+    },
+    {
+        "id": 80,
+        "codigo": "9",
+        "descripcion": "NANDAYURE",
+        "codProvi": "5"
+    },
+    {
+        "id": 81,
+        "codigo": "9",
+        "descripcion": "PARRITA",
+        "codProvi": "6"
+    }
+]
