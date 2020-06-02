@@ -6,6 +6,7 @@ import 'package:guanasfires/services/auth_services/sign_in.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:intl/intl.dart';
 
+
 class AddFire extends StatefulWidget {
  
   const AddFire();
@@ -24,91 +25,53 @@ class _AddFireState extends State<AddFire> {
   String _opcionSeleccionadaDistrito;
   
   List<String> _severidad = ['Baja', 'Media', 'Alta'];
-  
+
   @override
   Widget build(BuildContext context) {
 
     return CupertinoPageScaffold(
-      child: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Padding(
-              padding: EdgeInsets.all(8.0),
-            ),
-            _crearCantones(),
-            Divider(),
-           _crearDistrito(),
-            Divider(),
-           //_crearSeveridad(),
-            Divider(),
-           //_crearFecha(context),
-           Divider(),
-           // _crearImagen(),
-            Divider(),
-            Container(),
-            if (_imagenSeleccionada != null)
-              SizedBox(
-                height: 180,
-                child: Image.file(_imagenSeleccionada),
+      child:Scrollbar(
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Padding(
+                padding: EdgeInsets.all(2.0),
               ),
-            Divider(),
-            CupertinoButton.filled(
-              child: Text("Añadir incendio"),
-              onPressed: () {},
-            ),
+              _crearCantones(),
+              Divider(),
+              _crearDistrito(),
+              Divider(),
+              //_crearSeveridad(),
+              Divider(),
+              //_crearFecha(context),
+              Divider(),
+              // _crearImagen(),
+              Divider(),
+              Container(),
+              if (_imagenSeleccionada != null)
+                SizedBox(
+                  height: 180,
+                  child: Image.file(_imagenSeleccionada),
+                ),
+              Divider(),
+              CupertinoButton.filled(
+                child: Text("Añadir incendio"),
+                onPressed: () {},
+              ),
 
-          ],
+            ],
+          ),
         ),
       ),
     );
   }
 
-//dropdownDistrito
-  List<DropdownMenuItem<String>> getOpcionesDistrito() {
-    List<DropdownMenuItem<String>> lista = new List();
-
-    /*_distritos.forEach((distrito) {
-      lista.add(DropdownMenuItem(
-        child: Text(distrito.descripcion),
-        value: distrito.descripcion,
-      ));
-    });
-    */
-    return lista;
-  }
-
-  Widget _crearDistrito() {
-
-    return Row(
-      children: <Widget>[
-
-        Icon(Icons.edit_location),
-            SizedBox(width: 30.0),
-            Expanded(
-              child: DropdownButton(
-                value: _opcionSeleccionadaDistrito,
-                items: getOpcionesDistrito(),
-                onChanged: (opt) {
-                  setState(() {
-                    _opcionSeleccionadaDistrito = opt;
-                  });
-                 /* incendioProvider.changeDistrito(opt);*/
-
-                },
-              ),
-            ),
-      ],
-    );
-
-  }
-
 //dropdownCantones
- List<DropdownMenuItem<String>> getOpcionesCantones() {
+  List<DropdownMenuItem<String>> getOpcionesCantones() {
     List<DropdownMenuItem<String>> lista = new List();
     cantones.forEach((element) {
       if(element.codProvi == "5") {
-        print(element.descripcion);
         lista.add(DropdownMenuItem(
           child: Text(element.descripcion),
           value: element.descripcion,
@@ -117,31 +80,32 @@ class _AddFireState extends State<AddFire> {
     });
     return lista;
   }
- Widget _crearCantones() {
 
-    return Row(
-      children: <Widget>[
-      Icon(Icons.edit_location),
-            SizedBox(width: 30),
-            Expanded(
-              child: DropdownButton(
-                value: _opcionSeleccionadaCanton,
-                items: getOpcionesCantones(),
-                onChanged: (opt) {
-                  setState(() {
-                    _opcionSeleccionadaCanton = opt;
-                  });
-               /*   incendioProvider.changeCanton(opt);*/
+//dropdownDistrito
+  List<DropdownMenuItem<String>> getOpcionesDistrito() {
+    List<DropdownMenuItem<String>> lista = new List();
 
-                },
-              ),
-            ),
-      ],
-    );
+    String codCanton;
 
+    cantones.forEach((element) {
+      if(element.descripcion == _opcionSeleccionadaCanton){
+        codCanton =  element.codigo;
+      }
+    });
+
+    distritos.forEach((distrito) {
+      if(distrito.codProvi == "5" && distrito.codCant == codCanton){
+        lista.add(DropdownMenuItem(
+          child: Text(distrito.descripcion),
+          value: distrito.descripcion,
+        ));
+      }
+    });
+
+    return lista;
   }
   //dropdownSeveridad
-    List<DropdownMenuItem<String>> getOpcionesSeveridad() {
+  List<DropdownMenuItem<String>> getOpcionesSeveridad() {
     List<DropdownMenuItem<String>> lista = new List();
 
     _severidad.forEach((severidad) {
@@ -153,14 +117,53 @@ class _AddFireState extends State<AddFire> {
 
     return lista;
   }
-   Widget _crearSeveridad() {
+  Widget _crearCantones() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Icon(Icons.edit_location),
+        Spacer(),
+        Expanded(
+          child: DropdownButton(
+            value: _opcionSeleccionadaCanton,
+            items: getOpcionesCantones(),
+            onChanged: (opt) {
+              setState(() {
 
+                _opcionSeleccionadaCanton = opt;
+                _opcionSeleccionadaDistrito = null;
+              });
+            },
+          ),
+        ),
+      ],
+    );
+  }
+  Widget _crearDistrito() {
     return Row(
       children: <Widget>[
+        Icon(Icons.edit_location),
+            SizedBox(width: 40),
+            Expanded(
+              child: DropdownButton(
+                value: _opcionSeleccionadaDistrito,
+                items: getOpcionesDistrito(),
+                onChanged: (opt) {
+                  setState(() {
+                    _opcionSeleccionadaDistrito = opt;
+                  });
+                },
+              ),
+            ),
+      ],
+    );
 
+  }
+   Widget _crearSeveridad() {
+    return Row(
+      children: <Widget>[
       Icon(Icons.whatshot),
-            SizedBox(width: 30.0),
-
+            SizedBox(width: double.infinity),
             Expanded(
               child: DropdownButton(
                 value: _opcionSeleccionadaSeveridad,
@@ -169,8 +172,6 @@ class _AddFireState extends State<AddFire> {
                   setState(() {
                     _opcionSeleccionadaSeveridad = opt;
                   });
-
-                /*  incendioProvider.changeSeveridad(opt);*/
                 },
               ),
             ),
@@ -178,29 +179,6 @@ class _AddFireState extends State<AddFire> {
     );
 
   }
-
-
-  Widget _crearFecha( BuildContext context ) {
-    _fecha=DateTime.now();
-    var newFormat = DateFormat("dd-MM-yy");
-    String updatedDt = newFormat.format(_fecha);
-    print(updatedDt); // 20-04-03
-    return TextField(
-      enableInteractiveSelection: false,
-
-      decoration: InputDecoration(
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(20.0)
-        ),
-        hintText: 'Fecha',
-        labelText: updatedDt,
-        icon: Icon( Icons.calendar_today )
-      ),
-
-    );
-
-  }
-
   Widget _crearImagen() {
     return IconButton(
         icon: Icon(Icons.camera_alt),
@@ -214,3 +192,6 @@ class _AddFireState extends State<AddFire> {
         });
   }
 }
+
+
+
