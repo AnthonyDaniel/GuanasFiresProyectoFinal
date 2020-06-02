@@ -16,3 +16,19 @@ class Canton {
     );
   }
 }
+
+class CantonList {
+  final List<Canton> canton;
+
+  CantonList({
+    this.canton,
+  });
+
+  factory CantonList.fromJson(List<dynamic> parsedJson) {
+    List<Canton> canton = new List<Canton>();
+    canton = parsedJson.map((i)=>Canton.fromJson(i)).toList();
+    return new CantonList(
+        canton: canton
+    );
+  }
+}

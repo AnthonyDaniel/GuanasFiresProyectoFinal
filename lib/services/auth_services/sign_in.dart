@@ -2,15 +2,26 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:firebase_database/firebase_database.dart';
+import 'package:guanasfires/models/canton.dart';
+import 'package:guanasfires/models/distritos.dart';
+import 'package:guanasfires/models/provincia.dart';
 import 'dart:async';
 import 'package:guanasfires/models/user.dart';
+import 'package:guanasfires/services/locationsServices.dart';
 
 String name;
 String email;
 String imageUrl;
 bool admin;
 
+List<Provincia> provincias = new List<Provincia>();
+List<Canton> cantones = new List<Canton>();
+List<Distrito> distritos = new List<Distrito>();
+
 class Sign_In {
+
+  LocationsServices _locationsServices = new LocationsServices();
+
   Timer _timer;
 
   final FirebaseAuth _auth = FirebaseAuth.instance;
@@ -47,6 +58,10 @@ class Sign_In {
     email = user.email;
     imageUrl = user.photoUrl;
 
+    provincias = _locationsServices.provincias;
+    cantones =_locationsServices.cantones;
+    distritos = _locationsServices.distritos;
+
     await isAdmin();
 
     if (name.contains(" ")) {
@@ -58,6 +73,8 @@ class Sign_In {
 
     final FirebaseUser currentUser = await _auth.currentUser();
     assert(user.uid == currentUser.uid);
+
+
 
     return 'Inicio de sesión exitoso: $user';
   }

@@ -1,12 +1,10 @@
-
-
 import 'dart:io';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:guanasfires/services/auth_services/sign_in.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:intl/intl.dart';
-
 
 class AddFire extends StatefulWidget {
  
@@ -16,24 +14,20 @@ class AddFire extends StatefulWidget {
 }
 
 class _AddFireState extends State<AddFire> {
-  
-  String imagen;
+
+  String _imagen;
   DateTime _fecha;
 
   File _imagenSeleccionada;
-  String _opcionSeleccionadaSeveridad = 'Baja';
-  String _opcionSeleccionadaCanton = 'Cañas';
-  String _opcionSeleccionadaDistrito = 'Liberia';
-
-  List<String> _distritos = ['Liberia', 'CañasDulces', 'Nacascolo'];
-
+  String _opcionSeleccionadaSeveridad;
+  String _opcionSeleccionadaCanton = "LIBERIA";
+  String _opcionSeleccionadaDistrito;
+  
   List<String> _severidad = ['Baja', 'Media', 'Alta'];
-
-  List<String> _cantones = ['Cañas', 'Abangares', 'Santa Cruz'];
-
+  
   @override
   Widget build(BuildContext context) {
-   
+
     return CupertinoPageScaffold(
       child: Center(
         child: Column(
@@ -46,11 +40,11 @@ class _AddFireState extends State<AddFire> {
             Divider(),
            _crearDistrito(),
             Divider(),
-           _crearSeveridad(),
+           //_crearSeveridad(),
             Divider(),
-           _crearFecha(context),
+           //_crearFecha(context),
            Divider(),
-            _crearImagen(),
+           // _crearImagen(),
             Divider(),
             Container(),
             if (_imagenSeleccionada != null)
@@ -63,7 +57,7 @@ class _AddFireState extends State<AddFire> {
               child: Text("Añadir incendio"),
               onPressed: () {},
             ),
-            
+
           ],
         ),
       ),
@@ -74,16 +68,16 @@ class _AddFireState extends State<AddFire> {
   List<DropdownMenuItem<String>> getOpcionesDistrito() {
     List<DropdownMenuItem<String>> lista = new List();
 
-    _distritos.forEach((distrito) {
+    /*_distritos.forEach((distrito) {
       lista.add(DropdownMenuItem(
-        child: Text(distrito),
-        value: distrito,
+        child: Text(distrito.descripcion),
+        value: distrito.descripcion,
       ));
     });
-
+    */
     return lista;
   }
-  
+
   Widget _crearDistrito() {
 
     return Row(
@@ -100,7 +94,7 @@ class _AddFireState extends State<AddFire> {
                     _opcionSeleccionadaDistrito = opt;
                   });
                  /* incendioProvider.changeDistrito(opt);*/
-                
+
                 },
               ),
             ),
@@ -112,23 +106,23 @@ class _AddFireState extends State<AddFire> {
 //dropdownCantones
  List<DropdownMenuItem<String>> getOpcionesCantones() {
     List<DropdownMenuItem<String>> lista = new List();
-
-    _cantones.forEach((canton) {
-      lista.add(DropdownMenuItem(
-        child: Text(canton),
-        value: canton,
-      ));
+    cantones.forEach((element) {
+      if(element.codProvi == "5") {
+        print(element.descripcion);
+        lista.add(DropdownMenuItem(
+          child: Text(element.descripcion),
+          value: element.descripcion,
+        ));
+      }
     });
-
     return lista;
   }
  Widget _crearCantones() {
 
     return Row(
       children: <Widget>[
-
       Icon(Icons.edit_location),
-            SizedBox(width: 30.0),
+            SizedBox(width: 30),
             Expanded(
               child: DropdownButton(
                 value: _opcionSeleccionadaCanton,
@@ -138,7 +132,7 @@ class _AddFireState extends State<AddFire> {
                     _opcionSeleccionadaCanton = opt;
                   });
                /*   incendioProvider.changeCanton(opt);*/
-                   
+
                 },
               ),
             ),
@@ -166,7 +160,7 @@ class _AddFireState extends State<AddFire> {
 
       Icon(Icons.whatshot),
             SizedBox(width: 30.0),
-            
+
             Expanded(
               child: DropdownButton(
                 value: _opcionSeleccionadaSeveridad,
@@ -175,7 +169,7 @@ class _AddFireState extends State<AddFire> {
                   setState(() {
                     _opcionSeleccionadaSeveridad = opt;
                   });
-                
+
                 /*  incendioProvider.changeSeveridad(opt);*/
                 },
               ),
@@ -193,7 +187,7 @@ class _AddFireState extends State<AddFire> {
     print(updatedDt); // 20-04-03
     return TextField(
       enableInteractiveSelection: false,
-    
+
       decoration: InputDecoration(
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(20.0)
@@ -202,11 +196,11 @@ class _AddFireState extends State<AddFire> {
         labelText: updatedDt,
         icon: Icon( Icons.calendar_today )
       ),
-     
+
     );
 
   }
- 
+
   Widget _crearImagen() {
     return IconButton(
         icon: Icon(Icons.camera_alt),

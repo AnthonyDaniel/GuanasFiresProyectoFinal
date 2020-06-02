@@ -18,3 +18,20 @@ class Distrito {
     );
   }
 }
+
+
+class DistritoList {
+  final List<Distrito> distrito;
+
+  DistritoList({
+    this.distrito,
+  });
+
+  factory DistritoList.fromJson(List<dynamic> parsedJson) {
+    List<Distrito> distrito = new List<Distrito>();
+    distrito = parsedJson.map((i)=>Distrito.fromJson(i)).toList();
+    return new DistritoList(
+        distrito: distrito
+    );
+  }
+}
