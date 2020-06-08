@@ -26,6 +26,9 @@ dependencies:
   google_maps_flutter: ^0.5.11+1
   location: ^2.3.5
   flutter_polyline_points: ^0.1.0
+  gradient_app_bar: ^0.1.3
+  flutter_slidable: "^0.5.3"
+  flutter_launcher_icons: ^0.7.3
 
 dev_dependencies:
   flutter_test:
@@ -36,6 +39,7 @@ flutter:
   uses-material-design: true
 
   assets:
+    - assets/
     - assets/images/
     - resources/Cantones.json
     - resources/Distritos.json

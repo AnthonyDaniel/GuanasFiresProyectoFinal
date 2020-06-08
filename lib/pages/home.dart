@@ -1,37 +1,32 @@
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class Home extends StatelessWidget {
-  const Home();
+import 'package:flutter_slidable/flutter_slidable.dart';
+import 'package:guanasfires/pages/app_navbar/appBars.dart';
+import 'package:guanasfires/pages/bottom_navigation/bottomNavigation.dart';
+import 'package:guanasfires/pages/fab.dart';
+import 'package:guanasfires/pages/login.dart';
+import 'package:guanasfires/theme/util.dart';
+import 'package:guanasfires/services/auth_services/sign_in.dart';
+
+
+class Home extends StatefulWidget {
+  Home({Key key}) : super(key: key);
+
+  _HomeState createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+  final bottomNavigationBarIndex = 0;
+  Sign_In googleAuth = new Sign_In();
   @override
   Widget build(BuildContext context) {
-    return CupertinoPageScaffold(
-      navigationBar: CupertinoNavigationBar(
-        automaticallyImplyLeading: false,
-        middle:
-        Text("Inicio"),
+    return Scaffold(
+      appBar: fullAppbar(context),
+      body: Container(
       ),
-      child: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            CupertinoButton(
-              child: Text(
-                  "Inicio"
-              ),
-              onPressed: () {},
-            ),
-            const SizedBox(height: 16),
-            CupertinoButton.filled(
-              child: Text(
-                  "Inicio"
-              ),
-              onPressed: () {},
-            ),
-          ],
-        ),
-      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButton: customFab(context),
+      bottomNavigationBar: BottomNavigationBarApp(context, bottomNavigationBarIndex),
     );
   }
 }
