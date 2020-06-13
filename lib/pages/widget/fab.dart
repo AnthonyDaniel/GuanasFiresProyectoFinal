@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:guanasfires/pages/addFireFloat.dart';
+import 'package:guanasfires/pages/modal/addFireFloat.dart';
 
-import '../theme/util.dart';
+import '../../theme/util.dart';
 
 FloatingActionButton customFab(context) {
   Modal modal = Modal();

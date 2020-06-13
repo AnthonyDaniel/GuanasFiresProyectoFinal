@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:guanasfires/pages/app_navbar/appBars.dart';
 import 'package:guanasfires/pages/bottom_navigation/bottomNavigation.dart';
-import 'package:guanasfires/pages/fab.dart';
+import 'package:guanasfires/pages/widget/fab.dart';
 import 'package:guanasfires/pages/home.dart';
 import 'package:guanasfires/pages/login.dart';
 import 'package:guanasfires/services/auth_services/sign_in.dart';

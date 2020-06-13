@@ -2,13 +2,14 @@ import 'dart:io';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:guanasfires/pages/map_add_fire.dart';
 import 'package:guanasfires/services/auth_services/sign_in.dart';
+import 'package:guanasfires/theme/colors/light_colors.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:intl/intl.dart';
 
-
 class AddFire extends StatefulWidget {
- 
   const AddFire();
   @override
   _AddFireState createState() => _AddFireState();
@@ -21,53 +22,131 @@ class _AddFireState extends State<AddFire> {
 
   File _imagenSeleccionada;
   String _opcionSeleccionadaSeveridad;
-  String _opcionSeleccionadaCanton = "LIBERIA";
+  String _opcionSeleccionadaCanton;
   String _opcionSeleccionadaDistrito;
-  
-  List<String> _severidad = ['Baja', 'Media', 'Alta'];
+
+  int _severidad = 0;
 
   @override
   Widget build(BuildContext context) {
-
-    return CupertinoPageScaffold(
-      child:Scrollbar(
-        child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Padding(
-                padding: EdgeInsets.all(2.0),
-              ),
-              _crearCantones(),
-              Divider(),
-              _crearDistrito(),
-              Divider(),
-              //_crearSeveridad(),
-              Divider(),
-              //_crearFecha(context),
-              Divider(),
-              // _crearImagen(),
-              Divider(),
-              Container(),
-              if (_imagenSeleccionada != null)
-                SizedBox(
-                  height: 180,
-                  child: Image.file(_imagenSeleccionada),
+    return Scaffold(
+      backgroundColor: LightColors.kLightWhite,
+      body: new Column(
+        children: <Widget>[
+          new ListTile(
+            leading: const Icon(Icons.location_searching),
+            title: Text('Tu ubicación actual',
+                style: new TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18.0
+                )
+            ),
+            subtitle: Column(
+              children: <Widget>[
+                Container(
+                  height: 120,//MediaQuery.of(context).size.height,
+                  width: MediaQuery.of(context).size.width,
+                  child: Map()
                 ),
-              Divider(),
-              CupertinoButton.filled(
-                child: Text("Añadir incendio"),
-                onPressed: () {},
-              ),
-
-            ],
+                Text('En esta ubicación se reportara el incendio (*)',
+                  style: new TextStyle(
+                      fontSize: 9.0
+                  )
+                ),
+              ],
+            ),
           ),
-        ),
+          new ListTile(
+            leading: const Icon(Icons.location_on),
+            title:  Text('Selecciona el cantón',
+                style: new TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18.0
+                )
+            ),
+            subtitle: new DropdownButton(
+              value: _opcionSeleccionadaCanton,
+              items: getOpcionesCantones(),
+              onChanged: (opt) {
+                setState(() {
+                  _opcionSeleccionadaCanton = opt;
+                  _opcionSeleccionadaDistrito = null;
+                });
+              },
+            ),
+          ),
+          new ListTile(
+            leading: const Icon(Icons.location_on),
+            title:  Text('Selecciona el distrito',
+                style: new TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18.0
+                )
+            ),
+            subtitle:  DropdownButton(
+              value: _opcionSeleccionadaDistrito,
+              items: getOpcionesDistrito(),
+              onChanged: (opt) {
+                setState(() {
+                  _opcionSeleccionadaDistrito = opt;
+                });
+              },
+            ),
+          ),
+          new ListTile(
+            leading: const Icon(Icons.info),
+            title: Text('Seleciona la severidad',
+              style: new TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 18.0
+              )
+            ),
+            subtitle: new Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: <Widget>[
+                new Radio(
+                  value: 0,
+                  groupValue: _severidad,
+                  onChanged: null,
+                ),
+                new Text(
+                  'Baja',
+                  style: new TextStyle(
+                      fontSize: 11.0),
+                ),
+                new Radio(
+                  value: 1,
+                  groupValue: _severidad,
+                  onChanged: null,
+                ),
+                new Text(
+                  'Media',
+                  style: new TextStyle(
+                    fontSize: 11.0,
+                  ),
+                ),
+                new Radio(
+                  value: 2,
+                  groupValue: _severidad,
+                  onChanged: null,
+                ),
+                new Text(
+                  'Alta',
+                  style: new TextStyle(
+                      fontSize: 11.0),
+                ),
+              ],
+            ),
+          ),
+          const Divider(
+            height: 1.0,
+          ),
+        ],
       ),
     );
   }
 
-//dropdownCantones
+//dropdownCantones.dart
   List<DropdownMenuItem<String>> getOpcionesCantones() {
     List<DropdownMenuItem<String>> lista = new List();
     cantones.forEach((element) {
@@ -92,7 +171,6 @@ class _AddFireState extends State<AddFire> {
         codCanton =  element.codigo;
       }
     });
-
     distritos.forEach((distrito) {
       if(distrito.codProvi == "5" && distrito.codCant == codCanton){
         lista.add(DropdownMenuItem(
@@ -101,91 +179,15 @@ class _AddFireState extends State<AddFire> {
         ));
       }
     });
-
     return lista;
   }
   //dropdownSeveridad
-  List<DropdownMenuItem<String>> getOpcionesSeveridad() {
-    List<DropdownMenuItem<String>> lista = new List();
-
-    _severidad.forEach((severidad) {
-      lista.add(DropdownMenuItem(
-        child: Text(severidad),
-        value: severidad,
-      ));
-    });
-
-    return lista;
-  }
-  Widget _crearCantones() {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Icon(Icons.edit_location),
-        Spacer(),
-        Expanded(
-          child: DropdownButton(
-            value: _opcionSeleccionadaCanton,
-            items: getOpcionesCantones(),
-            onChanged: (opt) {
-              setState(() {
-
-                _opcionSeleccionadaCanton = opt;
-                _opcionSeleccionadaDistrito = null;
-              });
-            },
-          ),
-        ),
-      ],
-    );
-  }
-  Widget _crearDistrito() {
-    return Row(
-      children: <Widget>[
-        Icon(Icons.edit_location),
-            SizedBox(width: 40),
-            Expanded(
-              child: DropdownButton(
-                value: _opcionSeleccionadaDistrito,
-                items: getOpcionesDistrito(),
-                onChanged: (opt) {
-                  setState(() {
-                    _opcionSeleccionadaDistrito = opt;
-                  });
-                },
-              ),
-            ),
-      ],
-    );
-
-  }
-   Widget _crearSeveridad() {
-    return Row(
-      children: <Widget>[
-      Icon(Icons.whatshot),
-            SizedBox(width: double.infinity),
-            Expanded(
-              child: DropdownButton(
-                value: _opcionSeleccionadaSeveridad,
-                items: getOpcionesSeveridad(),
-                onChanged: (opt) {
-                  setState(() {
-                    _opcionSeleccionadaSeveridad = opt;
-                  });
-                },
-              ),
-            ),
-      ],
-    );
-
-  }
   Widget _crearImagen() {
     return IconButton(
         icon: Icon(Icons.camera_alt),
         color: Colors.grey,
         onPressed: () async {
           var image = await ImagePicker.pickImage(source: ImageSource.gallery);
-
           setState(() {
             _imagenSeleccionada = image;
           });

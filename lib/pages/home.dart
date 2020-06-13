@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:guanasfires/pages/app_navbar/appBars.dart';
 import 'package:guanasfires/pages/bottom_navigation/bottomNavigation.dart';
-import 'package:guanasfires/pages/fab.dart';
+import 'package:guanasfires/pages/widget/fab.dart';
 import 'package:guanasfires/pages/login.dart';
 import 'package:guanasfires/theme/util.dart';
 import 'package:guanasfires/services/auth_services/sign_in.dart';
