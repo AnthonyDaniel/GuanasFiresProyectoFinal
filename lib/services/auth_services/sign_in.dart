@@ -20,6 +20,9 @@ List<Distrito> distritos = new List<Distrito>();
 
 class Sign_In {
 
+  Sign_In(){
+  }
+
   LocationsServices _locationsServices = new LocationsServices();
 
   Timer _timer;
@@ -39,6 +42,12 @@ class Sign_In {
   Query _userQuery;
 
   Future<String> signInWithGoogle() async {
+
+    name = "";
+    email = "";
+    imageUrl = "";
+    admin = false;
+
     final GoogleSignInAccount googleSignInAccount = await googleSignIn.signIn();
     final GoogleSignInAuthentication googleSignInAuthentication =  await googleSignInAccount.authentication;
 
@@ -73,7 +82,6 @@ class Sign_In {
 
     final FirebaseUser currentUser = await _auth.currentUser();
     assert(user.uid == currentUser.uid);
-
 
 
     return 'Inicio de sesión exitoso: $user';
