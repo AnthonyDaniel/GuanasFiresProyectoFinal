@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:guanasfires/pages/home.dart';
-import 'package:guanasfires/services/auth_services/sign_in.dart';
+
 import '../../theme/util.dart';
 import '../addFire.dart';
 
@@ -15,7 +14,7 @@ class Modal {
       isScrollControlled: true,
       builder: (BuildContext context) {
         return Container(
-          height: MediaQuery.of(context).size.height - 80,
+          height: MediaQuery.of(context).size.height,
           padding:
               EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
           child: Stack(
@@ -101,5 +100,4 @@ class Modal {
       },
     );
   }
-
 }

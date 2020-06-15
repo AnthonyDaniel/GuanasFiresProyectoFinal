@@ -5,219 +5,6 @@ import 'package:flutter_polyline_points/flutter_polyline_points.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:guanasfires/theme/util.dart';
 import 'package:location/location.dart';
-/*
-class Map extends StatefulWidget {
-  @override
-  _MapState createState() => _MapState();
-}
-
-class _MapState extends State<Map> {
-
-  final Set<Marker> _markers = Set();
-  final double _zoom = 16;
-  CameraPosition _initialPosition = CameraPosition(target: LatLng(10.6350403, -85.4377213),zoom: 16);
-  MapType _defaultMapType = MapType.satellite;
-  Completer<GoogleMapController> _controller = Completer();
-
-  void _onMapCreated(GoogleMapController controller) {
-    _controller.complete(controller);
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      //drawer: _drawer(),
-      body: Stack(
-        children: <Widget>[
-          GoogleMap(
-            markers: _markers,
-            mapType: _defaultMapType,
-            myLocationEnabled: true,
-            onMapCreated: _onMapCreated,
-            initialCameraPosition: _initialPosition,
-          ),
-        ],
-      ),
-    );
-  }
-
-  Widget _drawer(){
-    return Drawer(
-      elevation: 16.0,
-      child: Column(
-        children: <Widget>[
-          UserAccountsDrawerHeader(
-            accountName: Text("xyz"),
-            accountEmail: Text("xyz@gmail.com"),
-            currentAccountPicture: CircleAvatar(
-              backgroundColor: Colors.white,
-              child: Text("xyz"),
-            ),
-            otherAccountsPictures: <Widget>[
-              CircleAvatar(
-                backgroundColor: Colors.white,
-                child: Text("abc"),
-              )
-            ],
-          ),
-          ListTile(
-            title: new Text("Places"),
-            leading: new Icon(Icons.flight),
-          ),
-          Divider(),
-          ListTile(
-            onTap: (){
-              _goToNewYork();
-              Navigator.of(context).pop();
-            },
-            title: new Text("New York"),
-            trailing: new Icon(Icons.arrow_forward_ios),
-          ),
-          ListTile(
-            onTap: (){
-              _goToNewDelhi();
-              Navigator.of(context).pop();
-            },
-            title: new Text("New Delhi"),
-            trailing: new Icon(Icons.arrow_forward_ios),
-          ),
-          ListTile(
-            onTap: (){
-              _goToLondon();
-              Navigator.of(context).pop();
-            },
-            title: new Text("London"),
-            trailing: new Icon(Icons.arrow_forward_ios),
-          ),
-          ListTile(
-            onTap: (){
-              _goToTokyo();
-              Navigator.of(context).pop();
-            },
-            title: new Text("Tokyo"),
-            trailing: new Icon(Icons.arrow_forward_ios),
-          ),
-          ListTile(
-            onTap: (){
-              _goToDubai();
-              Navigator.of(context).pop();
-            },
-            title: new Text("Dubai"),
-            trailing: new Icon(Icons.arrow_forward_ios),
-          ),
-          ListTile(
-            onTap: (){
-              _goToParis();
-              Navigator.of(context).pop();
-            },
-            title: new Text("Paris"),
-            trailing: new Icon(Icons.arrow_forward_ios),
-          )
-        ],
-      ),
-    );
-  }
-
-
-  Future<void> _goToNewYork() async {
-    double lat = 40.7128;
-    double long = -74.0060;
-    GoogleMapController controller = await _controller.future;
-    controller.animateCamera(CameraUpdate.newLatLngZoom(LatLng(lat, long), _zoom));
-    setState(() {
-      _markers.clear();
-      _markers.add(
-        Marker(
-            markerId: MarkerId('newyork'),
-            position: LatLng(lat, long),
-            infoWindow: InfoWindow(title: 'New York', snippet: 'Welcome to New York')
-        ),
-      );
-    });
-  }
-
-  Future<void> _goToNewDelhi() async {
-    double lat = 28.644800;
-    double long = 77.216721;
-    final GoogleMapController controller = await _controller.future;
-    controller.animateCamera(CameraUpdate.newLatLngZoom(LatLng(lat, long), _zoom));
-    setState(() {
-      _markers.clear();
-      _markers.add(
-        Marker(
-            markerId: MarkerId('newdelhi'),
-            position: LatLng(lat, long),
-            infoWindow: InfoWindow(title: 'New Delhi',  snippet: 'Welcome to New Delhi')),
-      );
-    });
-  }
-
-  Future<void> _goToLondon() async {
-    double lat = 51.5074;
-    double long = -0.1278;
-    final GoogleMapController controller = await _controller.future;
-    controller.animateCamera(CameraUpdate.newLatLngZoom(LatLng(lat, long), _zoom));
-    setState(() {
-      _markers.clear();
-      _markers.add(
-        Marker(
-            markerId: MarkerId('london'),
-            position: LatLng(lat, long),
-            infoWindow: InfoWindow(title: 'London',  snippet: 'Welcome to London')),
-      );
-    });
-  }
-
-  Future<void> _goToTokyo() async {
-    double lat = 35.6795;
-    double long = 139.77171;
-    final GoogleMapController controller = await _controller.future;
-    controller.animateCamera(CameraUpdate.newLatLngZoom(LatLng(lat, long), _zoom));
-    setState(() {
-      _markers.clear();
-      _markers.add(
-        Marker(
-            markerId: MarkerId('tokyo'),
-            position: LatLng(lat, long),
-            infoWindow: InfoWindow(title: 'Tokyo',  snippet: 'Welcome to Tokyo')),
-      );
-    });
-  }
-
-  Future<void> _goToDubai() async {
-    double lat = 25.2048;
-    double long =55.2708;
-    final GoogleMapController controller = await _controller.future;
-    controller.animateCamera(CameraUpdate.newLatLngZoom(LatLng(lat, long), _zoom));
-    setState(() {
-      _markers.clear();
-      _markers.add(
-        Marker(
-            markerId: MarkerId('dubai'),
-            position: LatLng(lat, long),
-            infoWindow: InfoWindow(title: 'Dubai',  snippet: 'Welcome to Dubai')),
-      );
-    });
-  }
-
-  Future<void> _goToParis() async {
-    double lat = 48.8566;
-    double long = 2.3522;
-    final GoogleMapController controller = await _controller.future;
-    controller.animateCamera(CameraUpdate.newLatLngZoom(LatLng(lat, long), _zoom));
-    setState(() {
-      _markers.clear();
-      _markers.add(
-        Marker(
-            markerId: MarkerId('paris'),
-            position: LatLng(lat, long),
-            infoWindow: InfoWindow(title: 'Paris',  snippet: 'Welcome to Paris')),
-      );
-    });
-  }
-}
-*/
-
 
 const double CAMERA_ZOOM = 17;
 const double CAMERA_TILT = 80;
@@ -316,7 +103,7 @@ class MapState extends State<Map> {
 
   void showPinsOnMap() {
     var pinPosition =
-    LatLng(currentLocation.latitude, currentLocation.longitude);
+        LatLng(currentLocation.latitude, currentLocation.longitude);
 
     sourcePinInfo = PinInformation(
         locationName: "Ubicación Actual",
@@ -372,7 +159,7 @@ class MapState extends State<Map> {
     controller.animateCamera(CameraUpdate.newCameraPosition(cPosition));
     setState(() {
       var pinPosition =
-      LatLng(currentLocation.latitude, currentLocation.longitude);
+          LatLng(currentLocation.latitude, currentLocation.longitude);
 
       sourcePinInfo.location = pinPosition;
 
@@ -391,7 +178,6 @@ class MapState extends State<Map> {
   }
 }
 
-
 class PinInformation {
   String pinPath;
   String avatarPath;
@@ -399,26 +185,27 @@ class PinInformation {
   String locationName;
   Color labelColor;
 
-  PinInformation({this.pinPath, this.avatarPath, this.location, this.locationName, this.labelColor});
+  PinInformation(
+      {this.pinPath,
+      this.avatarPath,
+      this.location,
+      this.locationName,
+      this.labelColor});
 }
 
-
 class MapPinPillComponent extends StatefulWidget {
-
   double pinPillPosition;
   PinInformation currentlySelectedPin;
 
-  MapPinPillComponent({ this.pinPillPosition, this.currentlySelectedPin});
+  MapPinPillComponent({this.pinPillPosition, this.currentlySelectedPin});
 
   @override
   State<StatefulWidget> createState() => MapPinPillComponentState();
 }
 
 class MapPinPillComponentState extends State<MapPinPillComponent> {
-
   @override
   Widget build(BuildContext context) {
-
     return AnimatedPositioned(
       bottom: widget.pinPillPosition,
       right: 0,
@@ -433,17 +220,22 @@ class MapPinPillComponentState extends State<MapPinPillComponent> {
               color: Colors.white,
               borderRadius: BorderRadius.all(Radius.circular(50)),
               boxShadow: <BoxShadow>[
-                BoxShadow(blurRadius: 20, offset: Offset.zero, color: Colors.grey.withOpacity(0.5))
-              ]
-          ),
+                BoxShadow(
+                    blurRadius: 20,
+                    offset: Offset.zero,
+                    color: Colors.grey.withOpacity(0.5))
+              ]),
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Container(
-                width: 50, height: 50,
+                width: 50,
+                height: 50,
                 margin: EdgeInsets.only(left: 10),
-                child: ClipOval(child: Image.asset(widget.currentlySelectedPin.avatarPath, fit: BoxFit.cover )),
+                child: ClipOval(
+                    child: Image.asset(widget.currentlySelectedPin.avatarPath,
+                        fit: BoxFit.cover)),
               ),
               Expanded(
                 child: Container(
@@ -452,16 +244,23 @@ class MapPinPillComponentState extends State<MapPinPillComponent> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      Text(widget.currentlySelectedPin.locationName, style: TextStyle(color: widget.currentlySelectedPin.labelColor)),
-                      Text('Latitude: ${widget.currentlySelectedPin.location.latitude.toString()}', style: TextStyle(fontSize: 12, color: Colors.grey)),
-                      Text('Longitude: ${widget.currentlySelectedPin.location.longitude.toString()}', style: TextStyle(fontSize: 12, color: Colors.grey)),
+                      Text(widget.currentlySelectedPin.locationName,
+                          style: TextStyle(
+                              color: widget.currentlySelectedPin.labelColor)),
+                      Text(
+                          'Latitude: ${widget.currentlySelectedPin.location.latitude.toString()}',
+                          style: TextStyle(fontSize: 12, color: Colors.grey)),
+                      Text(
+                          'Longitude: ${widget.currentlySelectedPin.location.longitude.toString()}',
+                          style: TextStyle(fontSize: 12, color: Colors.grey)),
                     ],
                   ),
                 ),
               ),
               Padding(
                 padding: EdgeInsets.all(15),
-                child: Image.asset(widget.currentlySelectedPin.pinPath, width: 50, height: 50),
+                child: Image.asset(widget.currentlySelectedPin.pinPath,
+                    width: 50, height: 50),
               )
             ],
           ),
