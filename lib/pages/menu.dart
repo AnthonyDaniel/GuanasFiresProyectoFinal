@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:guanasfires/pages/app_navbar/appBars.dart';
 import 'package:guanasfires/pages/bottom_navigation/bottomNavigation.dart';
+import 'package:guanasfires/pages/help.dart';
 import 'package:guanasfires/pages/widget/fab.dart';
 import 'package:guanasfires/pages/home.dart';
 import 'package:guanasfires/pages/login.dart';
@@ -172,7 +173,7 @@ class _MenuState extends State<Menu> {
                     Navigator.of(context).push(
                       MaterialPageRoute(
                         builder: (context) {
-                          //return Home();
+                          return Help();
                         },
                       ),
                     );
