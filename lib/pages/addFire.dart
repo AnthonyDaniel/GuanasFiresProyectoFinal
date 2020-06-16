@@ -8,6 +8,7 @@ import 'package:guanasfires/services/auth_services/sign_in.dart';
 import 'package:guanasfires/theme/colors/light_colors.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:path/path.dart' as Path;
+import 'package:progress_indicators/progress_indicators.dart';
 import 'package:video_player/video_player.dart';
 
 String uploadedFileURLImage;
@@ -21,7 +22,6 @@ class AddFire extends StatefulWidget {
 
 class _AddFireState extends State<AddFire> {
   VideoPlayerController _controller;
-  Future<void> _initializeVideoPlayerFuture;
 
   File _image = null;
   File _video = null;
@@ -29,23 +29,25 @@ class _AddFireState extends State<AddFire> {
   String _opcionSeleccionadaCanton;
   String _opcionSeleccionadaDistrito;
 
-  int _severidad = 0;
+  int _severidad = 1;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: LightColors.kLightWhite,
-      body: new Column(
+      body: SingleChildScrollView(
+        child:Stack(children: <Widget>[
+          new Column(
         children: <Widget>[
           new ListTile(
             leading: const Icon(Icons.location_searching),
             title: Text('Tu ubicación actual',
                 style:
-                    new TextStyle(fontWeight: FontWeight.bold, fontSize: 18.0)),
+                    new TextStyle(fontWeight: FontWeight.bold, fontSize: 13.0)),
             subtitle: Column(
               children: <Widget>[
                 Container(
-                  height: 120, //MediaQuery.of(context).size.height,
+                  height: 95, //MediaQuery.of(context).size.height,
                   width: MediaQuery.of(context).size.width,
                   child: Map(),
                 ),
@@ -58,7 +60,7 @@ class _AddFireState extends State<AddFire> {
             leading: const Icon(Icons.location_on),
             title: Text('Selecciona el cantón',
                 style:
-                    new TextStyle(fontWeight: FontWeight.bold, fontSize: 18.0)),
+                    new TextStyle(fontWeight: FontWeight.bold, fontSize: 13.0)),
             subtitle: new DropdownButton(
               value: _opcionSeleccionadaCanton,
               items: getOpcionesCantones(),
@@ -74,7 +76,7 @@ class _AddFireState extends State<AddFire> {
             leading: const Icon(Icons.location_on),
             title: Text('Selecciona el distrito',
                 style:
-                    new TextStyle(fontWeight: FontWeight.bold, fontSize: 18.0)),
+                    new TextStyle(fontWeight: FontWeight.bold, fontSize: 13.0)),
             subtitle: DropdownButton(
               value: _opcionSeleccionadaDistrito,
               items: getOpcionesDistrito(),
@@ -89,38 +91,38 @@ class _AddFireState extends State<AddFire> {
             leading: const Icon(Icons.info),
             title: Text('Seleciona la severidad',
                 style:
-                    new TextStyle(fontWeight: FontWeight.bold, fontSize: 18.0)),
+                    new TextStyle(fontWeight: FontWeight.bold, fontSize: 13.0)),
             subtitle: new Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
                 new Radio(
-                  value: 0,
+                  value: 1,
                   groupValue: _severidad,
-                  onChanged: null,
+                  onChanged: _changeSeveridad,
                 ),
                 new Text(
                   'Baja',
-                  style: new TextStyle(fontSize: 11.0),
-                ),
-                new Radio(
-                  value: 1,
-                  groupValue: _severidad,
-                  onChanged: null,
-                ),
-                new Text(
-                  'Media',
-                  style: new TextStyle(
-                    fontSize: 11.0,
-                  ),
+                  style: new TextStyle(fontSize: 9.0),
                 ),
                 new Radio(
                   value: 2,
                   groupValue: _severidad,
-                  onChanged: null,
+                  onChanged: _changeSeveridad,
+                ),
+                new Text(
+                  'Media',
+                  style: new TextStyle(
+                    fontSize: 9.0,
+                  ),
+                ),
+                new Radio(
+                  value: 3,
+                  groupValue: _severidad,
+                  onChanged: _changeSeveridad,
                 ),
                 new Text(
                   'Alta',
-                  style: new TextStyle(fontSize: 11.0),
+                  style: new TextStyle(fontSize: 9.0),
                 ),
               ],
             ),
@@ -130,69 +132,71 @@ class _AddFireState extends State<AddFire> {
           ),
           new ListTile(
               leading: const Icon(Icons.photo),
-              title: Text('Foto',
+              title: Text('Multimedia',
                   style: new TextStyle(
-                      fontWeight: FontWeight.bold, fontSize: 18.0)),
-              subtitle: _image == null
-                  ? RaisedButton(
-                      colorBrightness: Brightness.dark,
-                      splashColor: LightColors.kLavender,
-                      child: Icon(Icons.camera),
-                      onPressed: chooseFileImage,
-                      color: Colors.cyan,
-                    )
-                  : Container(
-                      child: uploadedFileURLImage != null
-                          ? Image.network(
-                              uploadedFileURLImage,
-                              height: 20,
-                            )
-                          : null)),
-          new ListTile(
-            leading: const Icon(Icons.videocam),
-            title: Text('Video',
-                style:
-                    new TextStyle(fontWeight: FontWeight.bold, fontSize: 18.0)),
-            subtitle: Column(
-              children: <Widget>[
-                Container(
-                  height: 20, //MediaQuery.of(context).size.height,
-                  width: MediaQuery.of(context).size.width,
-                ),
-              ],
-            ),
-          ),
-          _image == null
-              ? RaisedButton(
-                  child: Text('Choose File'),
-                  onPressed: chooseFileImage,
-                  color: Colors.cyan,
-                )
-              : Container(),
-          _image != null
-              ? RaisedButton(
-                  child: Text('Upload File'),
-                  //onPressed: uploadFile,
-                  color: Colors.cyan,
-                )
-              : Container(),
-          _image != null
-              ? RaisedButton(
-                  child: Text('Clear Selection'),
-                  onPressed: null,
-                )
-              : Container(),
-          Text('Uploaded Image'),
-          uploadedFileURLVideo != null
-              ? Image.network(
-                  uploadedFileURLVideo,
-                  height: 150,
-                )
-              : Container(),
-          VideoPlayerScreen()
+                      fontWeight: FontWeight.bold, fontSize: 13.0)),
+              subtitle:Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            _image == null
+                              ? RaisedButton(
+                                  colorBrightness: Brightness.dark,
+                                  splashColor: LightColors.kLavender,
+                                  child: Icon(Icons.camera),
+                                  onPressed: chooseFileImage,
+                                  color: Colors.cyan,
+                                )
+                              : Container(
+                                  child: uploadedFileURLImage != null
+                                      ? Text("Imagen cargada con exito", style: new TextStyle(fontSize: 8),)
+                                      : JumpingDotsProgressIndicator(
+                                          fontSize: 13.0,
+                                        )),
+                             _video == null
+                                ? RaisedButton(
+                                    colorBrightness: Brightness.dark,
+                                    splashColor: LightColors.kLavender,
+                                    child: Icon(Icons.videocam),
+                                    onPressed: chooseFileVideo,
+                                    color: Colors.cyan,
+                                  )
+                                : Container(
+                                    child: uploadedFileURLVideo != null
+                                        ? Text("Video cargado con exito", style: new TextStyle(fontSize: 8),)
+                                        : JumpingDotsProgressIndicator(
+                                            fontSize: 13.0,
+                                          )),
+                          ],
+                ), 
+              ),
+              Column(
+      mainAxisSize: MainAxisSize.min,
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Container(
+          width: 250,
+          margin: const EdgeInsets.only(top: 8),
+          child:  RaisedButton(
+            colorBrightness: Brightness.dark,
+            splashColor: LightColors.kLightWhite,
+            child: Text("Añadir incendio"),
+            onPressed: null,
+            color: Colors.cyan,
+          )
+        ),
+      ],
+    )
         ],
       ),
+        ],)
+      )
     );
+  }
+
+  void _changeSeveridad(int i){
+    setState(() {
+        _severidad = i;
+    });
   }
 
 //dropdownCantones.dart
@@ -235,6 +239,7 @@ class _AddFireState extends State<AddFire> {
     await ImagePicker.pickImage(source: ImageSource.camera).then((image) {
       setState(() {
         _image = image;
+        uploadFileImage();
       });
     });
   }
@@ -243,6 +248,7 @@ class _AddFireState extends State<AddFire> {
     await ImagePicker.pickVideo(source: ImageSource.camera).then((video) {
       setState(() {
         _video = video;
+        uploadFileVideo();
       });
     });
   }
@@ -273,67 +279,5 @@ class _AddFireState extends State<AddFire> {
         uploadedFileURLVideo = fileURL;
       });
     });
-  }
-}
-
-class VideoPlayerScreen extends StatefulWidget {
-  VideoPlayerScreen({Key key}) : super(key: key);
-
-  @override
-  _VideoPlayerScreenState createState() => _VideoPlayerScreenState();
-}
-
-class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
-  VideoPlayerController _controller;
-  Future<void> _initializeVideoPlayerFuture;
-
-  @override
-  void initState() {
-    _controller = VideoPlayerController.network(uploadedFileURLVideo);
-
-    _initializeVideoPlayerFuture = _controller.initialize();
-
-    _controller.setLooping(true);
-
-    super.initState();
-  }
-
-  @override
-  void dispose() {
-    _controller.dispose();
-    super.dispose();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: FutureBuilder(
-        future: _initializeVideoPlayerFuture,
-        builder: (context, snapshot) {
-          if (snapshot.connectionState == ConnectionState.done) {
-            return AspectRatio(
-              aspectRatio: _controller.value.aspectRatio,
-              child: VideoPlayer(_controller),
-            );
-          } else {
-            return Center(child: CircularProgressIndicator());
-          }
-        },
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          setState(() {
-            if (_controller.value.isPlaying) {
-              _controller.pause();
-            } else {
-              _controller.play();
-            }
-          });
-        },
-        child: Icon(
-          _controller.value.isPlaying ? Icons.pause : Icons.play_arrow,
-        ),
-      ),
-    );
   }
 }

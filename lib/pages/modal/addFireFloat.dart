@@ -21,7 +21,7 @@ class Modal {
             alignment: AlignmentDirectional.topCenter,
             children: <Widget>[
               Positioned(
-                top: MediaQuery.of(context).size.height / 25,
+                top: MediaQuery.of(context).size.height / 20,
                 left: 0,
                 child: Container(
                   height: MediaQuery.of(context).size.height,
@@ -40,13 +40,14 @@ class Modal {
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: <Widget>[
+                      SizedBox(height: 90),
                       InkWell(
                         onTap: () {
                           Navigator.pop(context);
                         },
                         child: Container(
-                          width: 50,
-                          height: 50,
+                          width: 25,
+                          height: 25,
                           child: Image.asset('assets/images/fab-delete.png'),
                           decoration: const BoxDecoration(
                             gradient: LinearGradient(
@@ -74,20 +75,20 @@ class Modal {
                       Column(
                         mainAxisSize: MainAxisSize.min,
                         children: <Widget>[
-                          SizedBox(height: 10),
+                          SizedBox(height: 0),
                           Text(
                             'Añadir incendio',
                             style: TextStyle(
-                                fontSize: 20, fontWeight: FontWeight.w600),
+                                fontSize: 15, fontWeight: FontWeight.w600),
                           ),
-                          SizedBox(height: 10),
+                          SizedBox(height: 0),
                           Container(
                             width: MediaQuery.of(context).size.width / 1.2,
                             height: MediaQuery.of(context).size.height,
                             padding: EdgeInsets.symmetric(vertical: 15),
                             child: AddFire(),
                           ),
-                          SizedBox(height: 20),
+                          SizedBox(height: 0),
                         ],
                       ),
                     ],
