@@ -17,7 +17,7 @@ bool admin;
 List<Provincia> provincias = new List<Provincia>();
 List<Canton> cantones = new List<Canton>();
 List<Distrito> distritos = new List<Distrito>();
-
+List<User> usersList = new List();
 class Sign_In {
 
   Sign_In(){
@@ -29,8 +29,6 @@ class Sign_In {
 
   final FirebaseAuth _auth = FirebaseAuth.instance;
   final GoogleSignIn googleSignIn = GoogleSignIn();
-
-  List<User> _usersList;
 
   final FirebaseDatabase _database = FirebaseDatabase.instance;
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
@@ -94,7 +92,7 @@ class Sign_In {
   }
 
   Future<void> isAdmin() async {
-    _usersList = new List();
+     usersList = new List();
     _userQuery = _database
         .reference()
         .child("users")
@@ -107,28 +105,28 @@ class Sign_In {
   void addNewUser(){
     _timer = new Timer(const Duration(milliseconds: 5000), () {
       bool existe = false;
-      for(int i = 0; i < _usersList.length; i++){
-        if(_usersList[i].email == email){
-          admin=_usersList[i].admin;
+      for(int i = 0; i < usersList.length; i++){
+        if(usersList[i].email == email){
+          admin=usersList[i].admin;
           existe = true;
         }
       }
       print("Admin:" + admin.toString());
       if(!existe){
-        User user = new User(email, email, false);
+        User user = new User(email, email, false,imageUrl);
         _database.reference().child("users").push().set(user.toJson());
       }
     });
   }
 
   onEntryChanged(Event event) {
-    var oldEntry = _usersList.singleWhere((entry) {
+    var oldEntry = usersList.singleWhere((entry) {
       return entry.key == event.snapshot.key;
     });
-    _usersList[_usersList.indexOf(oldEntry)] = User.fromSnapshot(event.snapshot);
+    usersList[usersList.indexOf(oldEntry)] = User.fromSnapshot(event.snapshot);
   }
 
   onEntryAdded(Event event) {
-    _usersList.add(User.fromSnapshot(event.snapshot));
+    usersList.add(User.fromSnapshot(event.snapshot));
   }
 }

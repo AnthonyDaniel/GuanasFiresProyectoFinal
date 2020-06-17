@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:guanasfires/pages/app_navbar/appBars.dart';
 import 'package:guanasfires/pages/bottom_navigation/bottomNavigation.dart';
 import 'package:guanasfires/pages/help.dart';
+import 'package:guanasfires/pages/users.dart';
 import 'package:guanasfires/pages/widget/fab.dart';
 import 'package:guanasfires/pages/home.dart';
 import 'package:guanasfires/pages/login.dart';
@@ -261,6 +262,68 @@ class _MenuState extends State<Menu> {
                             SizedBox(height: 8),
                             Text(
                               'Salir de la aplicación',
+                              style: TextStyle(
+                                  fontSize: 9,
+                                  color: CustomColors.TextSubHeaderGrey),
+                            ),
+                          ],
+                        ),
+                      ),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(5.0),
+                        ),
+                        boxShadow: [
+                          BoxShadow(
+                            color: CustomColors.GreyBorder,
+                            blurRadius: 10.0,
+                            spreadRadius: 5.0,
+                            offset: Offset(0.0, 0.0),
+                          ),
+                        ],
+                        color: Colors.white,
+                      ),
+                      margin: EdgeInsets.all(10),
+                      height: 150.0
+                  ),
+                ),
+                  InkWell(
+                  onTap: (){
+                      Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return Users();
+                        },
+                      ),
+                    );
+                  },
+                  child:Container(
+                      child: Center(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            Container(
+                              width: 65,
+                              height: 65,
+                              child: Icon(Icons.people),
+                              decoration: const BoxDecoration(
+                                color: CustomColors.OrangeBackground,
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(50.0),
+                                ),
+                              ),
+                            ),
+                            SizedBox(height: 5),
+                            Text(
+                              'Users',
+                              style: TextStyle(
+                                  fontSize: 17,
+                                  color: CustomColors.TextHeaderGrey,
+                                  fontWeight: FontWeight.w600),
+                            ),
+                            SizedBox(height: 8),
+                            Text(
+                              'Users Administration',
                               style: TextStyle(
                                   fontSize: 9,
                                   color: CustomColors.TextSubHeaderGrey),
