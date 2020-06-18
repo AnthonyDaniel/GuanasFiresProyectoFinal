@@ -53,7 +53,7 @@ class _UsersState extends State<Users> {
               key: Key(todoId),
               background: Container(color: Colors.red),
               onDismissed: (direction) async {
-                uServ.deleteTodo(todoId, index);
+                uServ.deleteUser(todoId, index);
               },
               child: ListTile(
                 title: Text(
@@ -69,7 +69,7 @@ class _UsersState extends State<Users> {
                           )
                         : Icon(Icons.done, color: Colors.grey, size: 20.0),
                     onPressed: () {
-                        //updateTodo(_usersList[index]);
+                      uServ.updateUser(usersList[index]);
                     }),
                 leading: CircleAvatar(
                   backgroundColor: Colors.grey,

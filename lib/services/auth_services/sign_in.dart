@@ -119,13 +119,21 @@ class Sign_In {
     });
   }
   
-  deleteTodo(String todoId, int index) {
+  deleteUser(String todoId, int index) {
     _database.reference().child("users").child(todoId).remove().then((_) {
         usersList.removeAt(index);
        print("Delete $todoId successful");
     });
   }
-
+  
+  updateUser(User todo) {
+    
+    todo.admin = !todo.admin;
+    if (todo != null) {
+      _database.reference().child("users").child(todo.key).set(todo.toJson());
+      print('admin now');
+    }
+  }
   onEntryChanged(Event event) {
     var oldEntry = usersList.singleWhere((entry) {
       return entry.key == event.snapshot.key;
