@@ -11,6 +11,7 @@ class Users extends StatefulWidget {
 }
 
 class _UsersState extends State<Users> {
+  Sign_In uServ= new Sign_In();
   final bottomNavigationBarIndex = 0;
   @override
   Widget build(BuildContext context) {
@@ -52,7 +53,7 @@ class _UsersState extends State<Users> {
               key: Key(todoId),
               background: Container(color: Colors.red),
               onDismissed: (direction) async {
-                 //deleteTodo(todoId, index);
+                uServ.deleteTodo(todoId, index);
               },
               child: ListTile(
                 title: Text(
