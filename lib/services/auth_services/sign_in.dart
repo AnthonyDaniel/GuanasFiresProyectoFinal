@@ -1,11 +1,12 @@
+import 'dart:async';
+
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-import 'package:firebase_database/firebase_database.dart';
 import 'package:guanasfires/models/canton.dart';
 import 'package:guanasfires/models/distritos.dart';
 import 'package:guanasfires/models/provincia.dart';
-import 'dart:async';
 import 'package:guanasfires/models/user.dart';
 import 'package:guanasfires/services/locationsServices.dart';
 
@@ -13,15 +14,15 @@ String name;
 String email;
 String imageUrl;
 bool admin;
+String token;
 
 List<Provincia> provincias = new List<Provincia>();
 List<Canton> cantones = new List<Canton>();
 List<Distrito> distritos = new List<Distrito>();
 List<User> usersList = new List();
-class Sign_In {
 
-  Sign_In(){
-  }
+class Sign_In {
+  Sign_In() {}
 
   LocationsServices _locationsServices = new LocationsServices();
 
@@ -40,14 +41,14 @@ class Sign_In {
   Query _userQuery;
 
   Future<String> signInWithGoogle() async {
-
     name = "";
     email = "";
     imageUrl = "";
     admin = false;
 
     final GoogleSignInAccount googleSignInAccount = await googleSignIn.signIn();
-    final GoogleSignInAuthentication googleSignInAuthentication =  await googleSignInAccount.authentication;
+    final GoogleSignInAuthentication googleSignInAuthentication =
+        await googleSignInAccount.authentication;
 
     final AuthCredential credential = GoogleAuthProvider.getCredential(
       accessToken: googleSignInAuthentication.accessToken,
@@ -66,7 +67,7 @@ class Sign_In {
     imageUrl = user.photoUrl;
 
     provincias = _locationsServices.provincias;
-    cantones =_locationsServices.cantones;
+    cantones = _locationsServices.cantones;
     distritos = _locationsServices.distritos;
 
     await isAdmin();
@@ -81,7 +82,6 @@ class Sign_In {
     final FirebaseUser currentUser = await _auth.currentUser();
     assert(user.uid == currentUser.uid);
 
-
     return 'Inicio de sesión exitoso: $user';
   }
 
@@ -92,48 +92,46 @@ class Sign_In {
   }
 
   Future<void> isAdmin() async {
-     usersList = new List();
-    _userQuery = _database
-        .reference()
-        .child("users")
-        .orderByChild("userId");
+    usersList = new List();
+    _userQuery = _database.reference().child("users").orderByChild("userId");
     _onTodoAddedSubscription = _userQuery.onChildAdded.listen(onEntryAdded);
-    _onTodoChangedSubscription =  _userQuery.onChildChanged.listen(onEntryChanged);
+    _onTodoChangedSubscription =
+        _userQuery.onChildChanged.listen(onEntryChanged);
     addNewUser();
   }
 
-  void addNewUser(){
+  void addNewUser() {
     _timer = new Timer(const Duration(milliseconds: 5000), () {
       bool existe = false;
-      for(int i = 0; i < usersList.length; i++){
-        if(usersList[i].email == email){
-          admin=usersList[i].admin;
+      for (int i = 0; i < usersList.length; i++) {
+        if (usersList[i].email == email) {
+          admin = usersList[i].admin;
           existe = true;
         }
       }
       print("Admin:" + admin.toString());
-      if(!existe){
-        User user = new User(email, email, false,imageUrl);
+      if (!existe) {
+        User user = new User(email, email, false, imageUrl, null);
         _database.reference().child("users").push().set(user.toJson());
       }
     });
   }
-  
+
   deleteUser(String todoId, int index) {
     _database.reference().child("users").child(todoId).remove().then((_) {
-        usersList.removeAt(index);
-       print("Delete $todoId successful");
+      usersList.removeAt(index);
+      print("Delete $todoId successful");
     });
   }
-  
+
   updateUser(User todo) {
-    
     todo.admin = !todo.admin;
     if (todo != null) {
       _database.reference().child("users").child(todo.key).set(todo.toJson());
       print('admin now');
     }
   }
+
   onEntryChanged(Event event) {
     var oldEntry = usersList.singleWhere((entry) {
       return entry.key == event.snapshot.key;

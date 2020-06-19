@@ -1,6 +1,9 @@
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:guanasfires/pages/home.dart';
+import 'package:guanasfires/services/auth_services/register_token.dart';
 import 'package:guanasfires/services/auth_services/sign_in.dart';
+
 import '../theme/util.dart';
 
 class LoginPage extends StatefulWidget {
@@ -11,9 +14,12 @@ class LoginPage extends StatefulWidget {
 
 class _LoginPageState extends State<LoginPage> {
   Sign_In googleAuth = new Sign_In();
+  FirebaseMessaging _firebaseMessaging;
+  bool _yesNotifications = false;
 
   @override
   void initState() {
+    _firebaseMessaging = FirebaseMessaging();
     super.initState();
   }
 
@@ -66,13 +72,7 @@ class _LoginPageState extends State<LoginPage> {
                 child: RaisedButton(
                   onPressed: () {
                     googleAuth.signInWithGoogle().whenComplete(() {
-                      Navigator.of(context).push(
-                        MaterialPageRoute(
-                          builder: (context) {
-                            return Home();
-                          },
-                        ),
-                      );
+                      _showDialog();
                     });
                   },
                   textColor: Colors.white,
@@ -122,5 +122,53 @@ class _LoginPageState extends State<LoginPage> {
         ),
       ),
     );
+  }
+
+  void _showDialog() {
+    // flutter defined function
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        // return object of type Dialog
+        return AlertDialog(
+          title: new Text("Notificaciones"),
+          content:
+              new Text("¿Deseas permitir notificaciones en tu dispositivo?"),
+          actions: <Widget>[
+            new FlatButton(
+                child: new Text("No"),
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return Home();
+                      },
+                    ),
+                  );
+                }),
+            new FlatButton(
+              child: new Text("Si"),
+              onPressed: () {
+                getTokenz();
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return Home();
+                    },
+                  ),
+                );
+                //Navigator.of(context, rootNavigator: true).pop('dialog');
+              },
+            ),
+          ],
+        );
+      },
+    );
+  }
+
+  getTokenz() async {
+    new Register_Token();
+    token = await _firebaseMessaging.getToken();
+    print('token: ' + token);
   }
 }
