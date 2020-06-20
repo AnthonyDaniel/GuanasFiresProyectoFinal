@@ -1,13 +1,8 @@
 import 'package:flutter/material.dart';
-
-import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:guanasfires/pages/app_navbar/appBars.dart';
 import 'package:guanasfires/pages/bottom_navigation/bottomNavigation.dart';
 import 'package:guanasfires/pages/widget/fab.dart';
-import 'package:guanasfires/pages/login.dart';
-import 'package:guanasfires/theme/util.dart';
 import 'package:guanasfires/services/auth_services/sign_in.dart';
-
 
 class Home extends StatefulWidget {
   Home({Key key}) : super(key: key);
@@ -22,11 +17,11 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: fullAppbar(context),
-      body: Container(
-      ),
+      body: Container(),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: customFab(context),
-      bottomNavigationBar: BottomNavigationBarApp(context, bottomNavigationBarIndex),
+      bottomNavigationBar:
+          BottomNavigationBarApp(context, bottomNavigationBarIndex),
     );
   }
 }

@@ -1,12 +1,10 @@
-
-import 'package:flutter/material.dart';
-import 'package:firebase_database/firebase_database.dart';
-import 'package:guanasfires/models/fire.dart';
 import 'dart:async';
 
+import 'package:firebase_database/firebase_database.dart';
+import 'package:flutter/material.dart';
+import 'package:guanasfires/models/fire.dart';
 
-class FireService{
-
+class FireService {
   List<Fire> _fireList;
 
   final FirebaseDatabase _database = FirebaseDatabase.instance;
@@ -16,30 +14,22 @@ class FireService{
   StreamSubscription<Event> _onTodoChangedSubscription;
 
   Query _userQuery;
-
-  addNewFire(String todoItem) {
-    if (todoItem.length > 0) {
-     // Fire todo = new Fire(todoItem.toString());
-    //  _database.reference().child("users").push().set(todo.toJson());
-    }
+  Future<String> addNewFire(Fire fire) async {
+    _database.reference().child("fires").push().set(fire.toJson());
+    return "Se ha agregado correctamente";
   }
 
   updateFire(Fire todo) {
-    //Toggle completed
-    
-    if (todo != null) {
-      _database.reference().child("fires").child(todo.key).set(todo.toJson());
-    }
+    _database.reference().child("fires").child(todo.key).set(todo.toJson());
   }
 
   deleteFire(String todoId, int index) {
     _database.reference().child("fires").child(todoId).remove().then((_) {
       print("Delete $todoId successful");
-      
-        _fireList.removeAt(index);
-      
+      _fireList.removeAt(index);
     });
   }
+
   onEntryChanged(Event event) {
     var oldEntry = _fireList.singleWhere((entry) {
       return entry.key == event.snapshot.key;

@@ -13,12 +13,12 @@ LatLng SOURCE_LOCATION = LatLng(42.747932, -71.167889);
 
 LocationData currentLocation;
 
-class Map extends StatefulWidget {
+class MapHome extends StatefulWidget {
   @override
-  State<StatefulWidget> createState() => MapState();
+  State<StatefulWidget> createState() => MapHomeState();
 }
 
-class MapState extends State<Map> {
+class MapHomeState extends State<MapHome> {
   Completer<GoogleMapController> _controller = Completer();
   Set<Marker> _markers = Set<Marker>();
 

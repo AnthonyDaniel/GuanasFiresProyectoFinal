@@ -4,19 +4,28 @@ class Fire {
   String key;
   String canton;
   String district;
-  String severity;
+  int severity;
   String date;
-  String fireId;
+  double lat;
+  double long;
+  String email;
+  String urlImage;
+  String urlVideo;
 
-  Fire(this.canton, this.district, this.date, this.severity, this.fireId);
+  Fire(this.canton, this.district, this.severity, this.date, this.lat,
+      this.long, this.email, this.urlImage, this.urlVideo);
 
-  Fire.fromSnapshot(DataSnapshot snapshot) :
-        key = snapshot.key,
+  Fire.fromSnapshot(DataSnapshot snapshot)
+      : key = snapshot.key,
         canton = snapshot.value["canton"],
         district = snapshot.value["ditrict"],
         severity = snapshot.value["severity"],
         date = snapshot.value["date"],
-        fireId = snapshot.value["fireId"];
+        lat = snapshot.value["lat"],
+        long = snapshot.value["long"],
+        email = snapshot.value["email"],
+        urlImage = snapshot.value["urlImage"],
+        urlVideo = snapshot.value["urlVideo"];
 
   toJson() {
     return {
@@ -24,7 +33,11 @@ class Fire {
       "district": district,
       "severity": severity,
       "date": date,
-      "fireId": fireId
+      "lat": lat,
+      "long": long,
+      "email": email,
+      "urlImage": urlImage,
+      "urlVideo": urlVideo,
     };
   }
 }

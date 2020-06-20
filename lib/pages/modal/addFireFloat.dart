@@ -4,9 +4,6 @@ import '../../theme/util.dart';
 import '../addFire.dart';
 
 class Modal {
-  String _opcionSeleccionadaCanton;
-  String _opcionSeleccionadaDistrito;
-
   mainBottomSheet(BuildContext context) {
     showModalBottomSheet(
       context: context,
@@ -40,14 +37,14 @@ class Modal {
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: <Widget>[
-                      SizedBox(height: 90),
+                      SizedBox(height: 30),
                       InkWell(
                         onTap: () {
                           Navigator.pop(context);
                         },
                         child: Container(
-                          width: 25,
-                          height: 25,
+                          width: 60,
+                          height: 60,
                           child: Image.asset('assets/images/fab-delete.png'),
                           decoration: const BoxDecoration(
                             gradient: LinearGradient(
@@ -86,7 +83,7 @@ class Modal {
                             width: MediaQuery.of(context).size.width / 1.2,
                             height: MediaQuery.of(context).size.height,
                             padding: EdgeInsets.symmetric(vertical: 15),
-                            child: AddFire(),
+                            child: AddFire(context),
                           ),
                           SizedBox(height: 0),
                         ],
