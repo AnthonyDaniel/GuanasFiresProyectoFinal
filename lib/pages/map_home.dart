@@ -83,8 +83,7 @@ class MapHomeState extends State<MapHome> {
     return Scaffold(
       appBar: AppBar(
           title: Text("Incendios"),
-          centerTitle: true,
-          excludeHeaderSemantics: true),
+          centerTitle: true),
       body: Stack(
         children: <Widget>[
           GoogleMap(
