@@ -371,7 +371,8 @@ class _AddFireState extends State<AddFire> {
                 currentLocation.longitude,
                 email,
                 uploadedFileURLImage,
-                uploadedFileURLVideo);
+                uploadedFileURLVideo,
+                true);
             print(fire.toJson());
             _alertExitoGeneral("Se ha agregado correctamente el incendio");
             fireService.addNewFire(fire);
