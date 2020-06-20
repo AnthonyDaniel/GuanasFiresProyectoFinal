@@ -7,7 +7,7 @@ import 'package:guanasfires/pages/widget/listFires.dart';
 import 'package:guanasfires/theme/util.dart';
 import 'package:location/location.dart';
 
-const double CAMERA_ZOOM_HOME = 10;
+const double CAMERA_ZOOM_HOME = 12;
 const double CAMERA_TILT_HOME = 80;
 const double CAMERA_BEARING_HOME = 45;
 LatLng SOURCE_LOCATION_HOME = LatLng(42.747932, -71.167889);
