@@ -4,20 +4,31 @@ import 'package:flutter/material.dart';
 import 'package:flutter_polyline_points/flutter_polyline_points.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:guanasfires/pages/widget/listFires.dart';
+import 'package:guanasfires/services/fireService.dart';
 import 'package:guanasfires/theme/util.dart';
 import 'package:location/location.dart';
 
-const double CAMERA_ZOOM_HOME = 12;
+const double CAMERA_ZOOM_HOME = 10;
 const double CAMERA_TILT_HOME = 80;
 const double CAMERA_BEARING_HOME = 45;
 LatLng SOURCE_LOCATION_HOME = LatLng(42.747932, -71.167889);
 
 class MapHome extends StatefulWidget {
+  FireService _fireService;
+  MapHome(FireService fireService) {
+    _fireService = fireService;
+  }
   @override
-  State<StatefulWidget> createState() => MapHomeState();
+  State<StatefulWidget> createState() => MapHomeState(_fireService);
 }
 
 class MapHomeState extends State<MapHome> {
+  FireService _fireService;
+
+  MapHomeState(FireService fireService) {
+    _fireService = fireService;
+  }
+
   Completer<GoogleMapController> _controller = Completer();
   Set<Marker> _markers = Set<Marker>();
 
@@ -26,7 +37,8 @@ class MapHomeState extends State<MapHome> {
   PolylinePoints polylinePoints;
   String googleAPIKey = 'AIzaSyCjvTQQxJhFK4PrlCXtfCkRlOl-EIWaZuM';
 
-  BitmapDescriptor sourceIcon;
+  BitmapDescriptor fireTrueIcon;
+  BitmapDescriptor fireFalseIcon;
 
   LocationData currentLocation;
 
@@ -48,7 +60,13 @@ class MapHomeState extends State<MapHome> {
     BitmapDescriptor.fromAssetImage(ImageConfiguration(devicePixelRatio: 2.5),
             'assets/images/firem.png')
         .then((onValue) {
-      sourceIcon = onValue;
+      fireTrueIcon = onValue;
+    });
+
+    BitmapDescriptor.fromAssetImage(ImageConfiguration(devicePixelRatio: 2.5),
+            'assets/images/fired.png')
+        .then((onValue) {
+      fireFalseIcon = onValue;
     });
 
     location = new Location();
@@ -63,7 +81,31 @@ class MapHomeState extends State<MapHome> {
   }
 
   void setInitialLocation() async {
+    new Timer(const Duration(milliseconds: 5000), () {
+      for (int i = 0; i < fireList.length; i++) {
+        print(fireList.elementAt(i).email);
+
+        loadMark(LatLng(fireList.elementAt(i).lat, fireList.elementAt(i).long),
+            fireList.elementAt(i).state, fireList.elementAt(i).key, (i + 0.1));
+      }
+    });
+
     currentLocation = await location.getLocation();
+  }
+
+  loadMark(LatLng positionMark, bool State, String key, double position) {
+    var pinPosition = positionMark;
+
+    _markers.add(Marker(
+        markerId: MarkerId(key),
+        position: pinPosition,
+        onTap: () {
+          setState(() {
+            pinPillPosition = position + 1;
+          });
+        },
+        icon: fireTrueIcon));
+    setPolylines();
   }
 
   @override
@@ -81,9 +123,7 @@ class MapHomeState extends State<MapHome> {
           bearing: CAMERA_BEARING_HOME);
     }
     return Scaffold(
-      appBar: AppBar(
-          title: Text("Incendios"),
-          centerTitle: true),
+      appBar: AppBar(title: Text("Incendios"), centerTitle: true),
       body: Stack(
         children: <Widget>[
           GoogleMap(
@@ -124,11 +164,10 @@ class MapHomeState extends State<MapHome> {
         position: pinPosition,
         onTap: () {
           setState(() {
-            currentlySelectedPin = sourcePinInfo;
             pinPillPosition = 0;
           });
         },
-        icon: sourceIcon));
+        icon: fireTrueIcon));
     setPolylines();
   }
 
@@ -175,12 +214,11 @@ class MapHomeState extends State<MapHome> {
           markerId: MarkerId('sourcePin'),
           onTap: () {
             setState(() {
-              currentlySelectedPin = sourcePinInfo;
               pinPillPosition = 0;
             });
           },
           position: pinPosition, // updated position
-          icon: sourceIcon));
+          icon: fireTrueIcon));
     });
   }
 }

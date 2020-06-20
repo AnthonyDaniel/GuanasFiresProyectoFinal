@@ -43,6 +43,12 @@ class MapState extends State<Map> {
   void initState() {
     super.initState();
 
+    BitmapDescriptor.fromAssetImage(ImageConfiguration(devicePixelRatio: 2.5),
+            'assets/images/firem.png')
+        .then((onValue) {
+      sourceIcon = onValue;
+    });
+
     location = new Location();
     polylinePoints = PolylinePoints();
 

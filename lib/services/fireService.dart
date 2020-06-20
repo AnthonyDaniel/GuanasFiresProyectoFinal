@@ -4,9 +4,9 @@ import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:guanasfires/models/fire.dart';
 
-class FireService {
-  List<Fire> _fireList;
+List<Fire> fireList;
 
+class FireService {
   final FirebaseDatabase _database = FirebaseDatabase.instance;
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
@@ -14,6 +14,15 @@ class FireService {
   StreamSubscription<Event> _onTodoChangedSubscription;
 
   Query _userQuery;
+
+  FireService() {
+    fireList = new List();
+    _userQuery = _database.reference().child("fires").orderByChild("key");
+    _onTodoAddedSubscription = _userQuery.onChildAdded.listen(onEntryAdded);
+    _onTodoChangedSubscription =
+        _userQuery.onChildChanged.listen(onEntryChanged);
+  }
+
   Future<String> addNewFire(Fire fire) async {
     _database.reference().child("fires").push().set(fire.toJson());
     return "Se ha agregado correctamente";
@@ -26,18 +35,18 @@ class FireService {
   deleteFire(String todoId, int index) {
     _database.reference().child("fires").child(todoId).remove().then((_) {
       print("Delete $todoId successful");
-      _fireList.removeAt(index);
+      fireList.removeAt(index);
     });
   }
 
   onEntryChanged(Event event) {
-    var oldEntry = _fireList.singleWhere((entry) {
+    var oldEntry = fireList.singleWhere((entry) {
       return entry.key == event.snapshot.key;
     });
-    _fireList[_fireList.indexOf(oldEntry)] = Fire.fromSnapshot(event.snapshot);
+    fireList[fireList.indexOf(oldEntry)] = Fire.fromSnapshot(event.snapshot);
   }
 
   onEntryAdded(Event event) {
-    _fireList.add(Fire.fromSnapshot(event.snapshot));
+    fireList.add(Fire.fromSnapshot(event.snapshot));
   }
 }

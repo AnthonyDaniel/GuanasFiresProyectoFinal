@@ -11,9 +11,10 @@ class Fire {
   String email;
   String urlImage;
   String urlVideo;
+  bool state;
 
   Fire(this.canton, this.district, this.severity, this.date, this.lat,
-      this.long, this.email, this.urlImage, this.urlVideo);
+      this.long, this.email, this.urlImage, this.urlVideo, this.state);
 
   Fire.fromSnapshot(DataSnapshot snapshot)
       : key = snapshot.key,
@@ -25,7 +26,8 @@ class Fire {
         long = snapshot.value["long"],
         email = snapshot.value["email"],
         urlImage = snapshot.value["urlImage"],
-        urlVideo = snapshot.value["urlVideo"];
+        urlVideo = snapshot.value["urlVideo"],
+        state = snapshot.value["state"];
 
   toJson() {
     return {
@@ -38,6 +40,7 @@ class Fire {
       "email": email,
       "urlImage": urlImage,
       "urlVideo": urlVideo,
+      "state": state,
     };
   }
 }
