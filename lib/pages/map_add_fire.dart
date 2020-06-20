@@ -38,7 +38,6 @@ class MapState extends State<Map> {
       locationName: '',
       labelColor: Colors.grey);
   PinInformation sourcePinInfo;
-  PinInformation destinationPinInfo;
 
   @override
   void initState() {
@@ -106,14 +105,14 @@ class MapState extends State<Map> {
     );
   }
 
-  void showPinsOnMap() {
+  void showPinsOnMap() async {
     var pinPosition =
         LatLng(currentLocation.latitude, currentLocation.longitude);
 
     sourcePinInfo = PinInformation(
         locationName: "Ubicación Actual",
         location: SOURCE_LOCATION,
-        pinPath: "",
+        pinPath: '',
         avatarPath: "",
         labelColor: Colors.blueAccent);
 

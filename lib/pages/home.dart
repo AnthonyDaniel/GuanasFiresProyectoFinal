@@ -4,6 +4,8 @@ import 'package:guanasfires/pages/bottom_navigation/bottomNavigation.dart';
 import 'package:guanasfires/pages/widget/fab.dart';
 import 'package:guanasfires/services/auth_services/sign_in.dart';
 
+import 'map_home.dart';
+
 class Home extends StatefulWidget {
   Home({Key key}) : super(key: key);
 
@@ -17,7 +19,7 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: fullAppbar(context),
-      body: Container(),
+      body: Container(child: MapHome()),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: customFab(context),
       bottomNavigationBar:
