@@ -36,8 +36,8 @@ class FireService {
     return "Se ha agregado correctamente";
   }
 
-  updateFire(Fire todo) {
-    _database.reference().child("fires").child(todo.key).set(todo.toJson());
+  updateFire(String key, Fire todo) {
+    _database.reference().child("fires").child(key).set(todo.toJson());
   }
 
   deleteFire(String todoId, int index) {

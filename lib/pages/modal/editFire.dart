@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:guanasfires/pages/editFire.dart';
 
 import '../../theme/util.dart';
-import '../addFire.dart';
 
 class EditeFireModal {
   mainBottomSheet(BuildContext context) {
@@ -74,7 +74,7 @@ class EditeFireModal {
                         children: <Widget>[
                           SizedBox(height: 0),
                           Text(
-                            'Añadir incendio',
+                            'Editar incendio',
                             style: TextStyle(
                                 fontSize: 15, fontWeight: FontWeight.w600),
                           ),
@@ -83,7 +83,7 @@ class EditeFireModal {
                             width: MediaQuery.of(context).size.width / 1.2,
                             height: MediaQuery.of(context).size.height,
                             padding: EdgeInsets.symmetric(vertical: 15),
-                            child: AddFire(context),
+                            child: EditFire(context),
                           ),
                           SizedBox(height: 0),
                         ],

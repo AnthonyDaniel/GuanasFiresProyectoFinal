@@ -19,7 +19,7 @@ class Fire {
   Fire.fromSnapshot(DataSnapshot snapshot)
       : key = snapshot.key,
         canton = snapshot.value["canton"],
-        district = snapshot.value["ditrict"],
+        district = snapshot.value["district"],
         severity = snapshot.value["severity"],
         date = snapshot.value["date"],
         lat = snapshot.value["lat"],

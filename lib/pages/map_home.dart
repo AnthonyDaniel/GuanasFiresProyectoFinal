@@ -2,9 +2,12 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_polyline_points/flutter_polyline_points.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:guanasfires/models/fire.dart';
 import 'package:guanasfires/pages/modal/editFire.dart';
 import 'package:guanasfires/pages/widget/listFires.dart';
+import 'package:guanasfires/services/auth_services/sign_in.dart';
 import 'package:guanasfires/services/fireService.dart';
 import 'package:guanasfires/theme/util.dart';
 import 'package:location/location.dart';
@@ -13,6 +16,7 @@ const double CAMERA_ZOOM_HOME = 10;
 const double CAMERA_TILT_HOME = 80;
 const double CAMERA_BEARING_HOME = 45;
 LatLng SOURCE_LOCATION_HOME = LatLng(42.747932, -71.167889);
+Fire fireModalM;
 
 class MapHome extends StatefulWidget {
   FireService _fireService;
@@ -93,8 +97,12 @@ class MapHomeState extends State<MapHome> {
       for (int i = 0; i < fireList.length; i++) {
         print(fireList.elementAt(i).email);
 
-        loadMark(LatLng(fireList.elementAt(i).lat, fireList.elementAt(i).long),
-            fireList.elementAt(i).state, fireList.elementAt(i).key, (i + 0.1));
+        loadMark(
+            LatLng(fireList.elementAt(i).lat, fireList.elementAt(i).long),
+            fireList.elementAt(i).state,
+            fireList.elementAt(i).key,
+            (i + 0.1),
+            fireList.elementAt(i));
       }
       new Timer(const Duration(milliseconds: 10000), () async {
         _fireService.reloadData();
@@ -103,7 +111,8 @@ class MapHomeState extends State<MapHome> {
     });
   }
 
-  loadMark(LatLng positionMark, bool state, String key, double position) {
+  loadMark(
+      LatLng positionMark, bool state, String key, double position, Fire fire) {
     var pinPosition = positionMark;
 
     EditeFireModal modal = new EditeFireModal();
@@ -117,7 +126,20 @@ class MapHomeState extends State<MapHome> {
           setState(() {
             pinPillPosition = position + 1;
           });
-          modal.mainBottomSheet(context);
+
+          if (admin && email == fire.email) {
+            fireModalM = fire;
+            modal.mainBottomSheet(context);
+          } else {
+            Fluttertoast.showToast(
+                msg: "No eliminado, necesitas permisos",
+                toastLength: Toast.LENGTH_LONG,
+                gravity: ToastGravity.CENTER,
+                timeInSecForIosWeb: 1,
+                backgroundColor: Colors.red,
+                textColor: Colors.white,
+                fontSize: 16.0);
+          }
         },
         icon: returnIconFire(state)));
     setPolylines();
