@@ -23,6 +23,8 @@ class MapHome extends StatefulWidget {
 }
 
 class MapHomeState extends State<MapHome> {
+  double latitudP = 0;
+  double longitudP = 0;
   FireService _fireService;
 
   MapHomeState(FireService fireService) {
@@ -103,6 +105,8 @@ class MapHomeState extends State<MapHome> {
   loadMark(LatLng positionMark, bool state, String key, double position) {
     var pinPosition = positionMark;
 
+    _markers.removeWhere((m) => m.markerId.value == key);
+
     _markers.add(Marker(
         markerId: MarkerId(key),
         position: pinPosition,
@@ -112,6 +116,12 @@ class MapHomeState extends State<MapHome> {
           });
         },
         icon: returnIconFire(state)));
+    setPolylines();
+  }
+
+  loadMarkdRemove(String key) {
+    _markers.removeWhere((m) => m.markerId.value == key);
+
     setPolylines();
   }
 
@@ -159,7 +169,7 @@ class MapHomeState extends State<MapHome> {
               }),
         ],
       ),
-      drawer: listFires(),
+      drawer: listFires(this, _fireService),
     );
   }
 
@@ -170,19 +180,19 @@ class MapHomeState extends State<MapHome> {
     sourcePinInfo = PinInformation(
         locationName: "Ubicación Actual",
         location: SOURCE_LOCATION_HOME,
-        pinPath: "",
+        pinPath: "13",
         avatarPath: "",
         labelColor: Colors.blueAccent);
 
     _markers.add(Marker(
-        markerId: MarkerId('sourcePin'),
-        position: pinPosition,
-        onTap: () {
-          setState(() {
-            pinPillPosition = 0;
-          });
-        },
-        icon: fireTrueIcon));
+      markerId: MarkerId('sourcePin'),
+      position: pinPosition,
+      onTap: () {
+        setState(() {
+          pinPillPosition = 0;
+        });
+      },
+    ));
     setPolylines();
   }
 
@@ -210,30 +220,57 @@ class MapHomeState extends State<MapHome> {
   }
 
   void updatePinOnMap() async {
+    if (longitudP == 0) {
+      CameraPosition cPosition = CameraPosition(
+        zoom: CAMERA_ZOOM_HOME,
+        tilt: CAMERA_TILT_HOME,
+        bearing: CAMERA_BEARING_HOME,
+        target: LatLng(currentLocation.latitude, currentLocation.longitude),
+      );
+      final GoogleMapController controller = await _controller.future;
+      controller.animateCamera(CameraUpdate.newCameraPosition(cPosition));
+      setState(() {
+        var pinPosition =
+            LatLng(currentLocation.latitude, currentLocation.longitude);
+
+        sourcePinInfo.location = pinPosition;
+
+        _markers.removeWhere((m) => m.markerId.value == 'sourcePin');
+      });
+    } else {
+      CameraPosition cPosition = CameraPosition(
+        zoom: CAMERA_ZOOM_HOME,
+        tilt: CAMERA_TILT_HOME,
+        bearing: CAMERA_BEARING_HOME,
+        target: LatLng(latitudP, longitudP),
+      );
+      final GoogleMapController controller = await _controller.future;
+      controller.animateCamera(CameraUpdate.newCameraPosition(cPosition));
+      setState(() {
+        var pinPosition = LatLng(latitudP, longitudP);
+
+        sourcePinInfo.location = pinPosition;
+
+        _markers.removeWhere((m) => m.markerId.value == 'sourcePin');
+      });
+    }
+  }
+
+  void recolocarCamara(double lat, double long) async {
+    latitudP = lat;
+    longitudP = long;
     CameraPosition cPosition = CameraPosition(
       zoom: CAMERA_ZOOM_HOME,
       tilt: CAMERA_TILT_HOME,
       bearing: CAMERA_BEARING_HOME,
-      target: LatLng(currentLocation.latitude, currentLocation.longitude),
+      target: LatLng(lat, long),
     );
     final GoogleMapController controller = await _controller.future;
     controller.animateCamera(CameraUpdate.newCameraPosition(cPosition));
     setState(() {
-      var pinPosition =
-          LatLng(currentLocation.latitude, currentLocation.longitude);
+      var pinPosition = LatLng(lat, long);
 
       sourcePinInfo.location = pinPosition;
-
-      _markers.removeWhere((m) => m.markerId.value == 'sourcePin');
-      _markers.add(Marker(
-          markerId: MarkerId('sourcePin'),
-          onTap: () {
-            setState(() {
-              pinPillPosition = 0;
-            });
-          },
-          position: pinPosition, // updated position
-          icon: fireTrueIcon));
     });
   }
 }

@@ -24,6 +24,7 @@ class FireService {
   }
 
   reloadData() {
+    fireList = new List();
     _userQuery = _database.reference().child("fires").orderByChild("key");
     _onTodoAddedSubscription = _userQuery.onChildAdded.listen(onEntryAdded);
     _onTodoChangedSubscription =
