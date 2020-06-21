@@ -1,18 +1,36 @@
+/* eslint-disable promise/no-nesting */
+/* eslint-disable promise/always-return */
 const functions = require('firebase-functions');
 const admin = require('firebase-admin');
 admin.initializeApp(functions.config().firebase);
 
-    exports.helloWorld = functions.database.ref('fires/{guanasfiresId}').onWrite((change, context)=> {
-        var token= 'dOPqDj1uSgCMHaV1cQsqDF:APA91bFBOsKkYVFFc9Ki9rtQHGSNJpioQeIrSZcE67ijE7fDz5tIRKI8cC7glA88bieEAo1F6yrjud_pzN1vtovXzPtkrTUiA_XweFT8owNnEB1k6chhcdhcBZFv0owz_RjgTIRLsRTN';
-        const payload = {
-            notification:{
-                title : 'Message from Cloud',
-                body : 'This is your body',
-                badge : '1',
-                sound : 'default'
-            }
-        };
-        console.log(change.after.val().email);
-        return admin.messaging().sendToDevice(token,payload);
-        
-    });
+exports.helloWorld = functions.database.ref('fires/{guanafiresId}').onWrite((snapshot, context) => {
+ 
+  const canton = snapshot.after.val().canton;
+  console.log(canton)
+  const payload = {
+    notification:{
+        title : 'Nuevo Incendio',
+        body : `Nuevo incendio agregado en ${canton}`,
+        badge : '1',
+        sound : 'default'
+    }
+};
+  return admin.database().ref('tokens').once('value').then(snapshots => {
+    tokens = [];
+    if(snapshots.empty){
+      console.log('no devices');
+    }else{
+    for (var token of Object.keys(snapshots.val())) {
+        console.log(token)
+      tokens.push(token);
+    }
+    
+
+    console.log('los '+tokens)
+    return admin.messaging().sendToDevice(tokens, payload).then((response=>{
+        console.log('pushed them all '+response.results);
+    }));
+   }
+  });
+});
