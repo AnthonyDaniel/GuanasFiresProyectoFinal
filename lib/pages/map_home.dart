@@ -127,7 +127,7 @@ class MapHomeState extends State<MapHome> {
             pinPillPosition = position + 1;
           });
 
-          if (admin && email == fire.email) {
+          if (admin || email == fire.email) {
             fireModalM = fire;
             modal.mainBottomSheet(context);
           } else {

@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:guanasfires/models/fire.dart';
 import 'package:guanasfires/pages/map_add_fire.dart';
 import 'package:guanasfires/pages/map_home.dart';
@@ -223,7 +224,32 @@ class _EditFireState extends State<EditFire> {
                           splashColor: LightColors.kLightWhite,
                           child: Text("Editar incendio"),
                           onPressed: () {
-                            editFire();
+                            print("Holaaaaaaa");
+
+                            Navigator.of(contextModal).pop();
+
+                            Fluttertoast.showToast(
+                                msg: "Se ha editado correctamente",
+                                toastLength: Toast.LENGTH_LONG,
+                                gravity: ToastGravity.CENTER,
+                                timeInSecForIosWeb: 1,
+                                backgroundColor: Colors.green,
+                                textColor: Colors.white,
+                                fontSize: 16.0);
+                            //var now = new DateTime.now();
+                            Fire fire = new Fire(
+                                _opcionSeleccionadaCanton,
+                                _opcionSeleccionadaDistrito,
+                                _severidad,
+                                "now.toIso8601String()",
+                                currentLocation.latitude,
+                                currentLocation.longitude,
+                                fireModalM.email,
+                                uploadedFileURLImage,
+                                uploadedFileURLVideo,
+                                state);
+
+                            fireService.updateFire(fireModalM.key, fire);
                           },
                           color: Colors.cyan,
                         )),
@@ -374,7 +400,7 @@ class _EditFireState extends State<EditFire> {
     });
   }
 
-  Future editFire() async {
+  editFire() {
     if (currentLocation.latitude != 0) {
       if (_opcionSeleccionadaCanton != null) {
         if (_opcionSeleccionadaDistrito != null) {
@@ -392,7 +418,7 @@ class _EditFireState extends State<EditFire> {
                 uploadedFileURLImage,
                 uploadedFileURLVideo,
                 state);
-            print(fire.toJson());
+
             _alertExitoGeneral("Se ha modificado correctamente el incendio");
             fireService.updateFire(fireModalM.key, fire);
           } else {
