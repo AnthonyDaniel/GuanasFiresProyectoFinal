@@ -81,6 +81,11 @@ class MapHomeState extends State<MapHome> {
   }
 
   void setInitialLocation() async {
+    reloadMap();
+    currentLocation = await location.getLocation();
+  }
+
+  reloadMap() async {
     new Timer(const Duration(milliseconds: 5000), () {
       for (int i = 0; i < fireList.length; i++) {
         print(fireList.elementAt(i).email);
@@ -88,9 +93,11 @@ class MapHomeState extends State<MapHome> {
         loadMark(LatLng(fireList.elementAt(i).lat, fireList.elementAt(i).long),
             fireList.elementAt(i).state, fireList.elementAt(i).key, (i + 0.1));
       }
+      new Timer(const Duration(milliseconds: 10000), () async {
+        _fireService.reloadData();
+      });
+      reloadMap();
     });
-
-    currentLocation = await location.getLocation();
   }
 
   loadMark(LatLng positionMark, bool state, String key, double position) {

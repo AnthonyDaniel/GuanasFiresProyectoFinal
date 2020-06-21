@@ -23,6 +23,13 @@ class FireService {
         _userQuery.onChildChanged.listen(onEntryChanged);
   }
 
+  reloadData() {
+    _userQuery = _database.reference().child("fires").orderByChild("key");
+    _onTodoAddedSubscription = _userQuery.onChildAdded.listen(onEntryAdded);
+    _onTodoChangedSubscription =
+        _userQuery.onChildChanged.listen(onEntryChanged);
+  }
+
   Future<String> addNewFire(Fire fire) async {
     _database.reference().child("fires").push().set(fire.toJson());
     return "Se ha agregado correctamente";

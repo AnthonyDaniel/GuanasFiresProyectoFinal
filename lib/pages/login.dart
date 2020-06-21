@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:guanasfires/pages/home.dart';
 import 'package:guanasfires/services/auth_services/register_token.dart';
 import 'package:guanasfires/services/auth_services/sign_in.dart';
+import 'package:guanasfires/services/fireService.dart';
 
 import '../theme/util.dart';
 
@@ -19,6 +20,8 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   void initState() {
+    new FireService();
+
     _firebaseMessaging = FirebaseMessaging();
     super.initState();
   }
