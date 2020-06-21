@@ -93,7 +93,7 @@ class MapHomeState extends State<MapHome> {
     currentLocation = await location.getLocation();
   }
 
-  loadMark(LatLng positionMark, bool State, String key, double position) {
+  loadMark(LatLng positionMark, bool state, String key, double position) {
     var pinPosition = positionMark;
 
     _markers.add(Marker(
@@ -104,8 +104,16 @@ class MapHomeState extends State<MapHome> {
             pinPillPosition = position + 1;
           });
         },
-        icon: fireTrueIcon));
+        icon: returnIconFire(state)));
     setPolylines();
+  }
+
+  returnIconFire(bool state) {
+    if (state) {
+      return fireTrueIcon;
+    } else {
+      return fireFalseIcon;
+    }
   }
 
   @override
