@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_polyline_points/flutter_polyline_points.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:guanasfires/pages/modal/editFire.dart';
 import 'package:guanasfires/pages/widget/listFires.dart';
 import 'package:guanasfires/services/fireService.dart';
 import 'package:guanasfires/theme/util.dart';
@@ -105,6 +106,8 @@ class MapHomeState extends State<MapHome> {
   loadMark(LatLng positionMark, bool state, String key, double position) {
     var pinPosition = positionMark;
 
+    EditeFireModal modal = new EditeFireModal();
+
     _markers.removeWhere((m) => m.markerId.value == key);
 
     _markers.add(Marker(
@@ -114,6 +117,7 @@ class MapHomeState extends State<MapHome> {
           setState(() {
             pinPillPosition = position + 1;
           });
+          modal.mainBottomSheet(context);
         },
         icon: returnIconFire(state)));
     setPolylines();
