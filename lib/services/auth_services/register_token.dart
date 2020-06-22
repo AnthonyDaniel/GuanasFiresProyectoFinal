@@ -53,16 +53,19 @@ class Register_Token {
         }
       }
       print("Admin:" + admin.toString());
+
       if (!existe) {
         User user = new User(email, email, false, imageUrl, token);
-        _database.reference().child("users").push().set(user.toJson());
+
+        _database.reference().child("tokens").push().set({"token": token});
       } else {
         userAux.token = token;
         _database
             .reference()
-            .child("users")
-            .child(userAux.key)
-            .set(userAux.toJson());
+            .child("tokens")
+            .child(token)
+            .push()
+            .set({"token": token});
       }
     });
   }
